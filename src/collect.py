@@ -111,6 +111,19 @@ def collect_account(client: ClipClient, account: dict, stored: dict,
     }
 
 
+def should_relogin(days_left: float | None, threshold: float,
+                   has_creds: bool) -> bool:
+    """만료 전 선제 재로그인을 할지 판단한다.
+
+    한 달에 한 번만 발동하는 분기라 틀려도 몇 주 뒤에나 드러난다 — 따로 떼어 검증한다.
+    days_left 가 None 이면 아직 로그인한 적이 없다는 뜻이므로 여기서 손대지 않는다
+    (수집을 시도해 보고 MissingSession 경로로 처리한다).
+    """
+    if days_left is None or not has_creds:
+        return False
+    return days_left <= threshold
+
+
 def _collect_once(account: dict, profiles_dir: Path, stored: dict,
                   now: datetime, limit: int) -> dict:
     naver_id = account["naver_id"]
@@ -149,8 +162,7 @@ def collect_all(config: dict, profiles_dir: Path, data_dir: Path,
         # 만료가 코앞이면 아직 멀쩡할 때 미리 갈아 끼운다.
         # 만료 후에 대응하면 반드시 하루는 깨지고, 그날 캡차가 뜨면 복구할 여유도 없다.
         left = days_until_expiry(profiles_dir / naver_id)
-        if (left is not None and left <= relogin_before
-                and has_credentials(naver_id)):
+        if should_relogin(left, relogin_before, has_credentials(naver_id)):
             log.info("[%s] 세션 만료까지 %.1f일 — 선제 재로그인", naver_id, left)
             try:
                 auto_login(naver_id, profiles_dir / naver_id, headless=headless)
