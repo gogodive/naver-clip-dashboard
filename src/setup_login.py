@@ -17,8 +17,9 @@ from pathlib import Path
 import yaml
 from playwright.sync_api import sync_playwright
 
-from src.naver_login import (LOGIN_URL, SEL_STAY, STUDIO_URL, LoginChallenge,
-                             LoginFailed, NoCredentials, auto_login, save_cookies)
+from src.naver_login import (LOGIN_URL, STUDIO_URL, LoginChallenge, LoginFailed,
+                             NoCredentials, auto_login, ensure_stay_checked,
+                             save_cookies)
 
 ROOT = Path(__file__).parent.parent
 WAIT_MINUTES = 10
@@ -47,10 +48,9 @@ def manual_login(naver_id: str, profile_dir: Path) -> int:
             page.goto(LOGIN_URL, wait_until="domcontentloaded", timeout=45000)
             page.wait_for_timeout(1500)
 
-            try:
-                page.locator(SEL_STAY).check(timeout=5000)
+            if ensure_stay_checked(page):
                 print("'로그인 상태 유지' 자동 체크 완료", flush=True)
-            except Exception:
+            else:
                 print("!! '로그인 상태 유지'를 자동으로 켜지 못했습니다 — "
                       "화면에서 직접 켜고 로그인하세요. 안 켜면 세션이 하루도 못 갑니다.",
                       file=sys.stderr, flush=True)

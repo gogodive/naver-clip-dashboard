@@ -27,6 +27,7 @@ else
   git commit -m "chore: 일일 데이터 갱신 $(date '+%Y-%m-%d')" || true
 fi
 
-git pull --rebase origin main && git push origin main
+# --autostash: 손대다 만 소스 변경이 있어도 일일 갱신은 막히지 않는다
+git pull --rebase --autostash origin main && git push origin main
 echo "===== $(date '+%Y-%m-%d %H:%M:%S') 완료 (exit $STATUS) ====="
 exit $STATUS

@@ -25,7 +25,9 @@ KEYCHAIN_SERVICE = "naver-clip"
 SEL_ID = "#id"
 SEL_PW = "#pw"
 SEL_STAY = "#loginStay"                       # name=nvlong — 이게 켜져야 NID_AUT 가 30일짜리가 된다
-SEL_SUBMIT = "#loginBtn_column, #loginBtn_row"
+SEL_STAY_LABEL = 'label[for="loginStay"]'     # 체크박스를 덮고 있어 실제로는 이걸 눌러야 한다
+# 레이아웃에 따라 column/row 중 하나만 보인다 — 보이는 쪽을 집어야 한다
+SEL_SUBMIT = "#loginBtn_column:visible, #loginBtn_row:visible"
 
 
 class LoginChallenge(RuntimeError):
@@ -68,14 +70,26 @@ def has_credentials(naver_id: str) -> bool:
         return False
 
 
-def _ensure_stay_checked(page) -> None:
-    """'로그인 상태 유지'를 켠다.
+def ensure_stay_checked(page) -> bool:
+    """'로그인 상태 유지'를 켠다. 성공 여부 반환.
 
     이게 꺼져 있으면 NID_AUT 가 세션 쿠키로 발급돼 브라우저를 닫는 순간 죽는다.
-    조용히 실패하면 매일 재로그인하게 되므로 확인까지 한다.
+    체크박스 자체는 라벨에 가려져 있어 .check() 가 막히므로 라벨을 눌러 토글한다.
     """
-    page.locator(SEL_STAY).check(timeout=5000)
-    if not page.locator(SEL_STAY).is_checked():
+    box = page.locator(SEL_STAY)
+    try:
+        if box.is_checked():
+            return True
+        page.locator(SEL_STAY_LABEL).click(timeout=5000)
+        if not box.is_checked():
+            box.check(force=True, timeout=3000)
+        return box.is_checked()
+    except Exception:
+        return False
+
+
+def _require_stay_checked(page) -> None:
+    if not ensure_stay_checked(page):
         raise LoginFailed("'로그인 상태 유지'를 켜지 못했습니다 — 세션이 하루도 못 갑니다")
 
 
@@ -87,12 +101,14 @@ def _classify_landing(page) -> None:
     if any(k in url for k in ("deviceConfirm", "otp", "twoFactor", "need2", "authTypeSelect")):
         raise LoginChallenge("2차 인증이 요구됐습니다 — 사람이 직접 로그인해야 합니다")
     if "nidlogin" in url:
-        err = ""
-        try:
-            err = page.locator(".error_message, #err_common").first.inner_text(timeout=1500)
-        except Exception:
-            pass
-        raise LoginFailed(f"로그인 화면에 머물러 있습니다 — {err or '아이디/비밀번호 확인 필요'}")
+        for sel in (".error_message", "#err_common", ".error_area", "[role=alert]"):
+            try:
+                msg = page.locator(sel).first.inner_text(timeout=1200).strip()
+            except Exception:
+                continue
+            if msg:
+                raise LoginFailed(f"로그인 화면에 머물러 있습니다 — {msg[:120]}")
+        raise LoginFailed("로그인 화면에 머물러 있습니다 — 아이디/비밀번호 확인 필요")
 
 
 def _wait_logged_in(ctx, timeout_s: int) -> bool:
@@ -197,14 +213,22 @@ def auto_login(naver_id: str, profile_dir: Path, headless: bool = True) -> list[
             page.goto(LOGIN_URL, wait_until="domcontentloaded", timeout=45000)
             page.wait_for_timeout(1500)
 
-            _ensure_stay_checked(page)
-            # 사람이 치는 속도로 입력한다. 한 번에 밀어 넣으면 네이버가 반려하는 경우가 있다.
+            _require_stay_checked(page)
+
+            # 영구 프로필에는 아이디가 저장돼 있을 수 있다 — 비우지 않으면 뒤에 덧붙는다
             page.locator(SEL_ID).click()
+            page.locator(SEL_ID).fill("")
             page.locator(SEL_ID).type(naver_id, delay=60)
             page.locator(SEL_PW).click()
+            page.locator(SEL_PW).fill("")
             page.locator(SEL_PW).type(password, delay=60)
             del password
-            page.locator(SEL_SUBMIT).first.click()
+
+            typed = page.locator(SEL_ID).input_value()
+            if typed != naver_id:
+                raise LoginFailed(f"아이디 입력이 어긋났습니다 (입력값 길이 {len(typed)})")
+
+            page.locator(SEL_SUBMIT).first.click(timeout=10000)
 
             page.wait_for_timeout(4000)
             if not _wait_logged_in(ctx, timeout_s=20):
