@@ -6,7 +6,7 @@
  "nickname": "물 만난 약사",
  "followers": 75,
  "registered_at": "2026-06-02T09:35:44.000",
- "fetched_at": "2026-08-05T02:35:59.099329+09:00",
+ "fetched_at": "2026-08-05T02:46:08.481938+09:00",
  "data_through": "2026-08-03",
  "data_from": "2026-07-16",
  "totals": {
@@ -837,7 +837,7 @@
      "ratio": 10
     }
    ],
-   "last_seen": "2026-08-05T02:35:59.099329+09:00"
+   "last_seen": "2026-08-05T02:46:08.481938+09:00"
   },
   {
    "no": 5142740,
@@ -847,7 +847,7 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA3MTZfMTIz/MDAxNzg0MTg4MTcwNzEz.dMiO6A91KG8HxGCIg66rtFdGKn7Siqoo1TsQSFPxki4g.nVa0-jiMh7sa2jnhn3WAF4oLdEscxQJinl5N9ZV3nDAg.JPEG/thumbnail-102DCF43-F7D7-413E-9C4A-642AEF105E02.jpg",
    "posted_at": "2026-07-16T16:49:35.000+09:00",
    "duration": 20.851,
-   "play": 2022,
+   "play": 2024,
    "like": 6,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
@@ -972,10 +972,10 @@
      "ratio": 7
     }
    ],
-   "last_seen": "2026-08-05T02:35:59.099329+09:00"
+   "last_seen": "2026-08-05T02:46:08.481938+09:00"
   }
  ],
  "error": null,
- "session_days_left": 0.0,
- "has_credentials": false
+ "session_days_left": 30.0,
+ "has_credentials": true
 }
