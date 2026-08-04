@@ -110,15 +110,19 @@ def _gender_split(age_gender: list[dict]) -> dict:
 
 
 def _chart_payload(daily: list[dict]) -> dict | None:
-    """추이 차트용 {labels, play, viewer}. 데이터가 없으면 None."""
+    """추이 차트용 {labels, play, viewer}. 조회 활동이 없으면 None.
+
+    클립이 0건이어도 팔로워 추이 때문에 시계열 자체는 존재한다.
+    그 경우 0만 늘어선 차트가 되므로 그리지 않는다.
+    """
     rows = [d for d in daily if d.get("play") is not None]
     if len(rows) < 2:
         return None
-    return {
-        "labels": [d["date"] for d in rows],
-        "play": [d.get("play") or 0 for d in rows],
-        "viewer": [(d.get("new_user") or 0) + (d.get("revisit_user") or 0) for d in rows],
-    }
+    play = [d.get("play") or 0 for d in rows]
+    viewer = [(d.get("new_user") or 0) + (d.get("revisit_user") or 0) for d in rows]
+    if not any(play) and not any(viewer):
+        return None
+    return {"labels": [d["date"] for d in rows], "play": play, "viewer": viewer}
 
 
 def render_html(accounts: list[dict], generated_at: datetime) -> str:

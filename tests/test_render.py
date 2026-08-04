@@ -90,6 +90,14 @@ def test_chart_payload_none_when_too_short():
     assert render._chart_payload([]) is None
 
 
+def test_chart_payload_none_when_all_zero():
+    """클립 0건 계정도 팔로워 추이 때문에 시계열은 존재한다 — 0만 그리지 않는다."""
+    assert render._chart_payload([
+        {"date": "2026-07-08", "play": 0, "new_user": 0, "revisit_user": 0, "follow": 3},
+        {"date": "2026-07-09", "play": 0, "new_user": 0, "revisit_user": 0, "follow": 2},
+    ]) is None
+
+
 def test_render_html_survives_empty_account():
     """업로드 0건 계정(freelife1245)에서 죽으면 안 된다."""
     html = render.render_html([{

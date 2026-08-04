@@ -1,0 +1,349 @@
+{
+ "naver_id": "so_younique",
+ "name": "운동하는 디자이너",
+ "clip_id": "so_younique",
+ "profile_key": "4FGok2e8KK5bEKb6O57U",
+ "nickname": "운동하는 디자이너",
+ "followers": 17,
+ "registered_at": "2026-07-07T13:13:48.000",
+ "fetched_at": "2026-08-05T02:16:51.838517+09:00",
+ "data_through": null,
+ "data_from": null,
+ "totals": {
+  "play": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "unique_user": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "like": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "follow_contribution": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "exposure": null,
+  "click": null,
+  "click_rate": null
+ },
+ "recent7": {
+  "play": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "unique_user": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "like": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "follow_contribution": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "exposure": null,
+  "click": null,
+  "click_rate": null
+ },
+ "daily": [
+  {
+   "date": "2026-07-08",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 3
+  },
+  {
+   "date": "2026-07-09",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 3
+  },
+  {
+   "date": "2026-07-10",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-11",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-12",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-13",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-14",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-15",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-16",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-17",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-18",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-19",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-20",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-21",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-22",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-23",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-24",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-25",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-26",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-27",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-28",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-29",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-30",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-31",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-08-01",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-08-02",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  }
+ ],
+ "entry_points": [],
+ "age_gender": [
+  {
+   "age": "AGE_10",
+   "gender": "MALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_10",
+   "gender": "FEMALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_20",
+   "gender": "MALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_20",
+   "gender": "FEMALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_30",
+   "gender": "MALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_30",
+   "gender": "FEMALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_40",
+   "gender": "MALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_40",
+   "gender": "FEMALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_50",
+   "gender": "MALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_50",
+   "gender": "FEMALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_60_UP",
+   "gender": "MALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_60_UP",
+   "gender": "FEMALE",
+   "play": 0,
+   "ratio": 0
+  }
+ ],
+ "clips": [],
+ "error": null
+}
