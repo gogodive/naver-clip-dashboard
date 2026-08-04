@@ -126,3 +126,23 @@ def test_render_html_escapes_script_in_title():
         "error": None,
     }], NOW)
     assert "</script>" not in html.split("const CHART_DATA")[1].split("\n")[0]
+
+
+def test_expiring_session_banner():
+    """세션 잔여가 얼마 없으면 수집이 성공해도 배너로 알린다."""
+    html = render.render_html([{
+        "naver_id": "funfun_seoki", "name": "물 만난 약사", "clips": [], "daily": [],
+        "entry_points": [], "age_gender": [], "error": None,
+        "session_days_left": 3.0, "has_credentials": True,
+    }], NOW)
+    assert "3일 뒤</b> 만료" in html
+    assert "src.setup_login funfun_seoki" in html
+
+
+def test_no_banner_when_session_healthy():
+    html = render.render_html([{
+        "naver_id": "x", "name": "x", "clips": [], "daily": [],
+        "entry_points": [], "age_gender": [], "error": None,
+        "session_days_left": 28.0, "has_credentials": True,
+    }], NOW)
+    assert "만료됩니다" not in html

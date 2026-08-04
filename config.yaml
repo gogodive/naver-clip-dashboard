@@ -21,3 +21,6 @@ login:
   # 비밀번호는 macOS 키체인에만 둔다:
   #   security add-generic-password -s naver-clip -a <네이버ID> -w
   headless: true
+  # 네이버는 NID_AUT 만료(약 30일)를 사용으로 연장해 주지 않는다.
+  # 만료 N일 전부터 선제적으로 재로그인해 끊기는 날이 없게 한다.
+  relogin_before_days: 5

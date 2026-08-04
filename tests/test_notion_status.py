@@ -6,8 +6,23 @@ KST = timezone(timedelta(hours=9))
 NOW = datetime(2026, 8, 5, 5, 0, tzinfo=KST)
 
 
-def acc(naver_id, error=None, clips=0):
-    return {"naver_id": naver_id, "error": error, "clips": [{}] * clips}
+def acc(naver_id, error=None, clips=0, days_left=None):
+    return {"naver_id": naver_id, "error": error, "clips": [{}] * clips,
+            "session_days_left": days_left}
+
+
+def test_expiring_session_warns_even_when_collection_succeeded():
+    """수집이 됐어도 세션이 곧 끊기면 알려야 한다 — 선제 재로그인이 실패했다는 뜻."""
+    icon, text = build_status([acc("a", clips=1, days_left=28),
+                               acc("b", clips=1, days_left=3)], NOW)
+    assert icon == "⚠️"
+    assert "세션 만료 임박: b(3일)" in text
+    assert "src.setup_login b" in text
+
+
+def test_healthy_session_does_not_warn():
+    icon, _ = build_status([acc("a", clips=1, days_left=28)], NOW)
+    assert icon == "✅"
 
 
 def test_all_ok():

@@ -16,6 +16,7 @@ HOT_RATIO = 2.0          # 계정 중앙값 대비 이 배수 이상이면 🔥
 HOT_RATIO_LABELED = 3.0  # 이 배수 이상이면 배수까지 표기 (🔥 4.2x)
 HOT_MIN_CLIPS = 5        # 조회수 있는 클립이 이보다 적으면 표시 안 함
 ENTRY_TOP = 6            # 유입처는 상위 N개만 표시하고 나머지는 합산
+EXPIRY_WARN_DAYS = 5     # 세션 잔여가 이보다 적으면 배너로 알린다
 
 AGE_LABELS = {
     "AGE_10": "10대", "AGE_20": "20대", "AGE_30": "30대",
@@ -142,6 +143,8 @@ def render_html(accounts: list[dict], generated_at: datetime) -> str:
         _annotate_hot(clips)
         acc["_live_clips"] = sum(1 for c in clips if not c.get("deleted"))
         acc["_deleted_clips"] = sum(1 for c in clips if c.get("deleted"))
+        left = acc.get("session_days_left")
+        acc["_expiring"] = left if isinstance(left, (int, float)) and left <= EXPIRY_WARN_DAYS else None
         acc["_entry_rows"] = _entry_rows(acc.get("entry_points") or [])
         acc["_age_rows"] = _age_rows(acc.get("age_gender") or [])
         acc["_gender"] = _gender_split(acc.get("age_gender") or [])

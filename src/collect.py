@@ -17,7 +17,7 @@ import yaml
 from src import normalize as nz
 from src.clipapi import ClipClient
 from src.naver_login import (LoginChallenge, LoginFailed, auto_login,
-                             has_credentials, refresh_session)
+                             days_until_expiry, has_credentials, refresh_session)
 from src.session import MissingSession, SessionExpired, build_session
 
 log = logging.getLogger(__name__)
@@ -122,12 +122,18 @@ def collect_all(config: dict, profiles_dir: Path, data_dir: Path,
                 now: datetime) -> list[dict]:
     """계정별로 수집. 실패한 계정은 직전 데이터를 그대로 유지한다.
 
-    세션이 만료되면 키체인에 비밀번호가 있는 경우 한 번만 자동 재로그인 후 재시도한다.
+    세션 관리는 네 겹이다:
+      0. 만료 임박(relogin_before_days 이내)이면 아직 멀쩡할 때 선제 재로그인
+      1. 저장된 쿠키로 요청
+      2. 401 이면 영구 프로필로 NID_SES 재발급 — 비밀번호 불필요
+      3. 그래도 실패하면 키체인 비밀번호로 재로그인
     캡차·2차 인증이 뜨면 사람을 부른다(우회하지 않는다).
     """
     data_dir.mkdir(parents=True, exist_ok=True)
     limit = config.get("clip_detail_limit", 60)
-    headless = config.get("login", {}).get("headless", True)
+    login_cfg = config.get("login", {}) or {}
+    headless = login_cfg.get("headless", True)
+    relogin_before = login_cfg.get("relogin_before_days", 5)
     out: list[dict] = []
 
     for account in config["accounts"]:
@@ -139,6 +145,20 @@ def collect_all(config: dict, profiles_dir: Path, data_dir: Path,
             r = stored or {"naver_id": naver_id, "name": account["name"], "clips": []}
             r["error"] = error
             return r
+
+        # 만료가 코앞이면 아직 멀쩡할 때 미리 갈아 끼운다.
+        # 만료 후에 대응하면 반드시 하루는 깨지고, 그날 캡차가 뜨면 복구할 여유도 없다.
+        left = days_until_expiry(profiles_dir / naver_id)
+        if (left is not None and left <= relogin_before
+                and has_credentials(naver_id)):
+            log.info("[%s] 세션 만료까지 %.1f일 — 선제 재로그인", naver_id, left)
+            try:
+                auto_login(naver_id, profiles_dir / naver_id, headless=headless)
+                left = days_until_expiry(profiles_dir / naver_id)
+            except Exception as e:
+                # 아직 남은 기간이 있으므로 수집은 계속한다
+                log.warning("[%s] 선제 재로그인 실패(%s) — 남은 %.1f일 안에 수동 로그인 필요",
+                            naver_id, type(e).__name__, left)
 
         try:
             try:
@@ -156,9 +176,13 @@ def collect_all(config: dict, profiles_dir: Path, data_dir: Path,
                     auto_login(naver_id, profiles_dir / naver_id, headless=headless)
                 result = _collect_once(account, profiles_dir, stored, now, limit)
 
+            result["session_days_left"] = round(left, 1) if left is not None else None
+            result["has_credentials"] = has_credentials(naver_id)
             path.write_text(json.dumps(result, ensure_ascii=False, indent=1),
                             encoding="utf-8")
-            log.info("[%s] 수집 완료 — 클립 %d건", naver_id, len(result["clips"]))
+            log.info("[%s] 수집 완료 — 클립 %d건 (세션 잔여 %s일)", naver_id,
+                     len(result["clips"]),
+                     f"{left:.0f}" if left is not None else "?")
         except LoginChallenge as e:
             log.error("[%s] %s", naver_id, e)
             result = fallback("challenge")

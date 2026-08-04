@@ -17,6 +17,7 @@ KST = timezone(timedelta(hours=9))
 API = "https://api.notion.com/v1"
 NOTION_VERSION = "2022-06-28"
 TIMEOUT = 20
+EXPIRY_WARN_DAYS = 5   # 세션 잔여가 이보다 적으면 선제 재로그인이 실패했다는 뜻
 
 
 def build_status(accounts: list[dict], generated_at: datetime) -> tuple[str, str]:
@@ -44,6 +45,17 @@ def build_status(accounts: list[dict], generated_at: datetime) -> tuple[str, str
         names = ", ".join(failed)
         return "⚠️", (f"{stamp} · {ok}/{total}개 계정 갱신 — 실패: {names} "
                       f"(해당 계정은 이전 데이터)")
+
+    # 수집은 됐지만 세션이 곧 끊긴다 — 선제 재로그인이 듣지 않았다는 뜻이다
+    soon = [(a["naver_id"], a["session_days_left"]) for a in accounts
+            if a.get("session_days_left") is not None
+            and a["session_days_left"] <= EXPIRY_WARN_DAYS]
+    if soon:
+        names = ", ".join(f"{n}({d:.0f}일)" for n, d in sorted(soon, key=lambda x: x[1]))
+        return "⚠️", (f"{stamp} 갱신 완료 · {total}개 계정 · 클립 {clips:,}개 "
+                      f"— 세션 만료 임박: {names} · "
+                      f"python -m src.setup_login {sorted(soon, key=lambda x: x[1])[0][0]}")
+
     return "✅", f"{stamp} 갱신 완료 · {total}개 계정 · 클립 {clips:,}개"
 
 

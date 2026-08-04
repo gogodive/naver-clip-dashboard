@@ -114,6 +114,10 @@
     터미널에서 <code>.venv/bin/python -m src.setup_login {{ acc.naver_id }}</code> 를 실행해 다시 로그인하세요.</div>
   {% elif acc.error %}
   <div class="stale">⚠️ 이번 수집에 실패했습니다 — 아래 화면은 이전 데이터입니다.</div>
+  {% elif acc._expiring is not none %}
+  <div class="stale">⚠️ <b>{{ acc.naver_id }}</b> 네이버 세션이 <b>{{ acc._expiring | round | int }}일 뒤</b> 만료됩니다.
+    {% if acc.has_credentials %}자동 재로그인이 듣지 않았습니다 —{% endif %}
+    <code>.venv/bin/python -m src.setup_login {{ acc.naver_id }}</code> 로 미리 로그인해 두세요.</div>
   {% endif %}
 
   {% if acc.recent7 %}

@@ -118,6 +118,28 @@ def save_cookies(ctx, profile_dir: Path) -> list[dict]:
     return cookies
 
 
+def days_until_expiry(profile_dir: Path) -> float | None:
+    """NID_AUT 만료까지 남은 일수. 세션 쿠키거나 파일이 없으면 None.
+
+    네이버는 NID_AUT 만료를 사용으로 연장해 주지 않는다(실측: 19일간 매일 써도
+    만료일이 로그인 당일 기준 그대로). 그래서 만료 전에 미리 갈아 끼워야 한다.
+    """
+    path = profile_dir / "session_cookies.json"
+    if not path.exists():
+        return None
+    try:
+        cookies = json.loads(path.read_text())
+    except (OSError, ValueError):
+        return None
+    auth = next((c for c in cookies if c.get("name") == "NID_AUT"), None)
+    if not auth:
+        return None
+    expires = auth.get("expires", -1)
+    if not expires or expires <= 0:
+        return 0.0          # 세션 쿠키 — 브라우저를 닫는 순간 죽는다
+    return (expires - time.time()) / 86400
+
+
 def refresh_session(naver_id: str, profile_dir: Path, headless: bool = True) -> list[dict]:
     """비밀번호 없이 세션을 되살린다.
 
