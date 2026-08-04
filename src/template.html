@@ -105,8 +105,12 @@
     {% if acc._deleted_clips %} (삭제 {{ acc._deleted_clips }}건){% endif %}
   </div>
 
-  {% if acc.error == "session" %}
-  <div class="warn">🚨 <b>{{ acc.naver_id }}</b> 네이버 세션이 만료됐습니다 — 아래 화면은 이전 수집 데이터입니다.<br>
+  {% if acc.error == "challenge" %}
+  <div class="warn">🚨 <b>{{ acc.naver_id }}</b> 네이버가 캡차 또는 2차 인증을 요구했습니다 — 자동 로그인으로는 넘을 수 없습니다.<br>
+    터미널에서 <code>.venv/bin/python -m src.setup_login {{ acc.naver_id }}</code> 를 실행해 직접 로그인하세요.
+    아래 화면은 이전 수집 데이터입니다.</div>
+  {% elif acc.error == "session" %}
+  <div class="warn">🚨 <b>{{ acc.naver_id }}</b> 세션이 만료됐고 자동 재로그인도 실패했습니다 — 아래 화면은 이전 수집 데이터입니다.<br>
     터미널에서 <code>.venv/bin/python -m src.setup_login {{ acc.naver_id }}</code> 를 실행해 다시 로그인하세요.</div>
   {% elif acc.error %}
   <div class="stale">⚠️ 이번 수집에 실패했습니다 — 아래 화면은 이전 데이터입니다.</div>

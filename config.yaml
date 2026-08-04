@@ -15,3 +15,9 @@ notion:
 
 # 클립 단위 상세 지표(유입처·연령성별)를 받아올 최대 개수 — 최근 것부터
 clip_detail_limit: 60
+
+login:
+  # 세션 만료 시 키체인 비밀번호로 자동 재로그인한다. 창을 띄우려면 false.
+  # 비밀번호는 macOS 키체인에만 둔다:
+  #   security add-generic-password -s naver-clip -a <네이버ID> -w
+  headless: true

@@ -16,6 +16,8 @@ import yaml
 
 from src import normalize as nz
 from src.clipapi import ClipClient
+from src.naver_login import (LoginChallenge, LoginFailed, auto_login,
+                             has_credentials, refresh_session)
 from src.session import MissingSession, SessionExpired, build_session
 
 log = logging.getLogger(__name__)
@@ -109,11 +111,23 @@ def collect_account(client: ClipClient, account: dict, stored: dict,
     }
 
 
+def _collect_once(account: dict, profiles_dir: Path, stored: dict,
+                  now: datetime, limit: int) -> dict:
+    naver_id = account["naver_id"]
+    session = build_session(profiles_dir, naver_id)
+    return collect_account(ClipClient(session, naver_id), account, stored, now, limit)
+
+
 def collect_all(config: dict, profiles_dir: Path, data_dir: Path,
                 now: datetime) -> list[dict]:
-    """계정별로 수집. 실패한 계정은 직전 데이터를 그대로 유지한다."""
+    """계정별로 수집. 실패한 계정은 직전 데이터를 그대로 유지한다.
+
+    세션이 만료되면 키체인에 비밀번호가 있는 경우 한 번만 자동 재로그인 후 재시도한다.
+    캡차·2차 인증이 뜨면 사람을 부른다(우회하지 않는다).
+    """
     data_dir.mkdir(parents=True, exist_ok=True)
     limit = config.get("clip_detail_limit", 60)
+    headless = config.get("login", {}).get("headless", True)
     out: list[dict] = []
 
     for account in config["accounts"]:
@@ -121,21 +135,39 @@ def collect_all(config: dict, profiles_dir: Path, data_dir: Path,
         path = data_dir / f"{naver_id}.json"
         stored = json.loads(path.read_text()) if path.exists() else {}
 
+        def fallback(error: str) -> dict:
+            r = stored or {"naver_id": naver_id, "name": account["name"], "clips": []}
+            r["error"] = error
+            return r
+
         try:
-            session = build_session(profiles_dir, naver_id)
-            result = collect_account(ClipClient(session, naver_id), account,
-                                     stored, now, limit)
+            try:
+                result = _collect_once(account, profiles_dir, stored, now, limit)
+            except (SessionExpired, MissingSession) as e:
+                # 1단계: 비밀번호 없이 세션 재발급 시도 (NID_AUT 가 살아 있으면 성공)
+                log.warning("%s — 세션 갱신 시도", e)
+                try:
+                    refresh_session(naver_id, profiles_dir / naver_id, headless=headless)
+                except Exception as refresh_err:
+                    # 2단계: 키체인 비밀번호로 재로그인
+                    if not has_credentials(naver_id):
+                        raise e from refresh_err
+                    log.warning("[%s] 세션 갱신 실패 — 자동 재로그인 시도", naver_id)
+                    auto_login(naver_id, profiles_dir / naver_id, headless=headless)
+                result = _collect_once(account, profiles_dir, stored, now, limit)
+
             path.write_text(json.dumps(result, ensure_ascii=False, indent=1),
                             encoding="utf-8")
             log.info("[%s] 수집 완료 — 클립 %d건", naver_id, len(result["clips"]))
-        except (SessionExpired, MissingSession) as e:
+        except LoginChallenge as e:
+            log.error("[%s] %s", naver_id, e)
+            result = fallback("challenge")
+        except (SessionExpired, MissingSession, LoginFailed) as e:
             log.error("%s", e)
-            result = stored or {"naver_id": naver_id, "name": account["name"], "clips": []}
-            result["error"] = "session"
+            result = fallback("session")
         except Exception:
             log.exception("[%s] 수집 실패", naver_id)
-            result = stored or {"naver_id": naver_id, "name": account["name"], "clips": []}
-            result["error"] = "fetch"
+            result = fallback("fetch")
 
         out.append(result)
 

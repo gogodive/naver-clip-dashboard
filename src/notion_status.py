@@ -25,13 +25,20 @@ def build_status(accounts: list[dict], generated_at: datetime) -> tuple[str, str
     total = len(accounts)
     clips = sum(len(a.get("clips") or []) for a in accounts)
 
+    challenged = [a["naver_id"] for a in accounts if a.get("error") == "challenge"]
     expired = [a["naver_id"] for a in accounts if a.get("error") == "session"]
-    failed = [a["naver_id"] for a in accounts if a.get("error") and a.get("error") != "session"]
-    ok = total - len(expired) - len(failed)
+    failed = [a["naver_id"] for a in accounts if a.get("error") == "fetch"]
+    ok = total - len(challenged) - len(expired) - len(failed)
 
+    # 캡차·2차 인증은 자동화로 못 넘는다 — 가장 먼저 알린다
+    if challenged:
+        names = ", ".join(challenged)
+        return "🚨", (f"{stamp} · {ok}/{total}개 계정 갱신 — {names} 캡차/2차 인증 요구 "
+                      f"(python -m src.setup_login {challenged[0]} 로 직접 로그인) "
+                      f"· 해당 계정은 이전 데이터")
     if expired:
         names = ", ".join(expired)
-        return "🚨", (f"{stamp} · {ok}/{total}개 계정 갱신 — {names} 세션 만료로 재로그인 필요 "
+        return "🚨", (f"{stamp} · {ok}/{total}개 계정 갱신 — {names} 자동 재로그인 실패 "
                       f"(python -m src.setup_login {expired[0]}) · 해당 계정은 이전 데이터")
     if failed:
         names = ", ".join(failed)
