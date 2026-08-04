@@ -12,16 +12,15 @@ from __future__ import annotations
 
 import json
 import logging
-import subprocess
 import time
 from pathlib import Path
+
+from src import keychain
 
 log = logging.getLogger(__name__)
 
 LOGIN_URL = "https://nid.naver.com/nidlogin.login"
 STUDIO_URL = "https://clipcreators.naver.com/web/dashboard"
-KEYCHAIN_SERVICE = "naver-clip"
-
 SEL_ID = "#id"
 SEL_PW = "#pw"
 SEL_STAY = "#loginStay"                       # name=nvlong — 이게 켜져야 NID_AUT 가 30일짜리가 된다
@@ -43,23 +42,16 @@ class NoCredentials(RuntimeError):
         self.naver_id = naver_id
         super().__init__(
             f"[{naver_id}] 키체인에 비밀번호가 없습니다. 먼저 저장하세요:\n"
-            f"  security add-generic-password -s {KEYCHAIN_SERVICE} -a {naver_id} -w"
+            f"  {keychain.store_hint(naver_id)}"
         )
 
 
 def read_password(naver_id: str) -> str:
     """macOS 키체인에서 비밀번호를 읽는다. 로그에 절대 남기지 않는다."""
-    try:
-        r = subprocess.run(
-            ["security", "find-generic-password", "-s", KEYCHAIN_SERVICE,
-             "-a", naver_id, "-w"],
-            capture_output=True, text=True, timeout=15,
-        )
-    except (OSError, subprocess.SubprocessError) as e:
-        raise NoCredentials(naver_id) from e
-    if r.returncode != 0 or not r.stdout.strip():
+    value = keychain.get(naver_id)
+    if not value:
         raise NoCredentials(naver_id)
-    return r.stdout.rstrip("\n")
+    return value
 
 
 def has_credentials(naver_id: str) -> bool:

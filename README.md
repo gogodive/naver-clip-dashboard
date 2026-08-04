@@ -37,9 +37,17 @@ python3 -m venv .venv
 .venv/bin/python -m src.setup_login funfun_seoki
 ```
 
-노션 상태 기록을 쓰려면 `.env.example` 을 `.env` 로 복사해 `NOTION_TOKEN` 을 채운다.
-노션 내부 통합을 만들고 허브 페이지에 **콘텐츠 업데이트** 권한으로 연결해야 한다.
-없어도 수집·배포는 정상 동작한다.
+노션 상태 기록을 쓰려면 내부 통합 토큰이 필요하다. 없어도 수집·배포는 정상 동작한다.
+
+1. https://www.notion.so/my-integrations 에서 내부 통합을 만들거나 기존 것의 시크릿을 복사
+2. 허브 페이지 우측 상단 `⋯` → **연결** → 그 통합을 추가 (콘텐츠 업데이트 권한 필요)
+3. 키체인에 저장
+
+```bash
+security add-generic-password -s naver-clip -a notion-token -w
+```
+
+토큰은 키체인을 먼저 보고, 없으면 환경변수 `NOTION_TOKEN` 을 쓴다.
 
 GitHub Pages 는 **Settings → Pages → Deploy from a branch → main / docs** 로 설정한다.
 
