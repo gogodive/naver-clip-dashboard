@@ -1,0 +1,979 @@
+{
+ "naver_id": "funfun_seoki",
+ "name": "물 만난 약사",
+ "clip_id": "funfun_seoki",
+ "profile_key": "dPxqMETGKSZjVeVkDp30",
+ "nickname": "물 만난 약사",
+ "followers": 75,
+ "registered_at": "2026-06-02T09:35:44.000",
+ "fetched_at": "2026-08-05T02:11:39.364334+09:00",
+ "data_through": "2026-08-03",
+ "data_from": "2026-07-16",
+ "totals": {
+  "play": {
+   "count": 22978,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "unique_user": {
+   "count": 11277,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "like": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "follow_contribution": {
+   "count": 5,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "exposure": 35322,
+  "click": 1947,
+  "click_rate": 5.5
+ },
+ "recent7": {
+  "play": {
+   "count": 1109,
+   "diff_rate": 18.5,
+   "diff_type": "DOWN"
+  },
+  "unique_user": {
+   "count": 810,
+   "diff_rate": 19.6,
+   "diff_type": "DOWN"
+  },
+  "like": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "follow_contribution": {
+   "count": 1,
+   "diff_rate": 0.0,
+   "diff_type": "STALE"
+  },
+  "exposure": 1419,
+  "click": 89,
+  "click_rate": 6.3
+ },
+ "daily": [
+  {
+   "date": "2026-06-03",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 3
+  },
+  {
+   "date": "2026-06-04",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 3
+  },
+  {
+   "date": "2026-06-05",
+   "play": 0,
+   "new_user": 1,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-06-06",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-07",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-08",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 2
+  },
+  {
+   "date": "2026-06-09",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 6
+  },
+  {
+   "date": "2026-06-10",
+   "play": 1,
+   "new_user": 1,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-11",
+   "play": 2,
+   "new_user": 2,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-06-12",
+   "play": 48,
+   "new_user": 38,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-13",
+   "play": 138,
+   "new_user": 97,
+   "revisit_user": 4,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-14",
+   "play": 214,
+   "new_user": 136,
+   "revisit_user": 3,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-15",
+   "play": 352,
+   "new_user": 232,
+   "revisit_user": 6,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-16",
+   "play": 1328,
+   "new_user": 847,
+   "revisit_user": 19,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-17",
+   "play": 295,
+   "new_user": 188,
+   "revisit_user": 17,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-18",
+   "play": 244,
+   "new_user": 126,
+   "revisit_user": 16,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-19",
+   "play": 69,
+   "new_user": 31,
+   "revisit_user": 9,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-20",
+   "play": 258,
+   "new_user": 131,
+   "revisit_user": 26,
+   "follow_contribution": 0,
+   "follow": 2
+  },
+  {
+   "date": "2026-06-21",
+   "play": 537,
+   "new_user": 299,
+   "revisit_user": 52,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-06-22",
+   "play": 802,
+   "new_user": 410,
+   "revisit_user": 79,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-06-23",
+   "play": 1167,
+   "new_user": 592,
+   "revisit_user": 138,
+   "follow_contribution": 1,
+   "follow": 3
+  },
+  {
+   "date": "2026-06-24",
+   "play": 1281,
+   "new_user": 573,
+   "revisit_user": 182,
+   "follow_contribution": 0,
+   "follow": 2
+  },
+  {
+   "date": "2026-06-25",
+   "play": 928,
+   "new_user": 400,
+   "revisit_user": 173,
+   "follow_contribution": 1,
+   "follow": 3
+  },
+  {
+   "date": "2026-06-26",
+   "play": 1069,
+   "new_user": 515,
+   "revisit_user": 174,
+   "follow_contribution": 0,
+   "follow": 5
+  },
+  {
+   "date": "2026-06-27",
+   "play": 1392,
+   "new_user": 684,
+   "revisit_user": 196,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-28",
+   "play": 1395,
+   "new_user": 615,
+   "revisit_user": 204,
+   "follow_contribution": 0,
+   "follow": -1
+  },
+  {
+   "date": "2026-06-29",
+   "play": 1033,
+   "new_user": 429,
+   "revisit_user": 197,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-06-30",
+   "play": 1894,
+   "new_user": 886,
+   "revisit_user": 292,
+   "follow_contribution": 0,
+   "follow": 2
+  },
+  {
+   "date": "2026-07-01",
+   "play": 1705,
+   "new_user": 781,
+   "revisit_user": 266,
+   "follow_contribution": 0,
+   "follow": 3
+  },
+  {
+   "date": "2026-07-02",
+   "play": 1153,
+   "new_user": 479,
+   "revisit_user": 213,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-03",
+   "play": 425,
+   "new_user": 159,
+   "revisit_user": 103,
+   "follow_contribution": 0,
+   "follow": 4
+  },
+  {
+   "date": "2026-07-04",
+   "play": 690,
+   "new_user": 292,
+   "revisit_user": 130,
+   "follow_contribution": 1,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-05",
+   "play": 710,
+   "new_user": 251,
+   "revisit_user": 152,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-06",
+   "play": 928,
+   "new_user": 433,
+   "revisit_user": 166,
+   "follow_contribution": 0,
+   "follow": 2
+  },
+  {
+   "date": "2026-07-07",
+   "play": 439,
+   "new_user": 195,
+   "revisit_user": 77,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-08",
+   "play": 1,
+   "new_user": 0,
+   "revisit_user": 1,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-09",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-10",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-11",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-12",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-13",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-14",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": -1
+  },
+  {
+   "date": "2026-07-15",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-16",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 1,
+   "follow_contribution": 0,
+   "follow": 3
+  },
+  {
+   "date": "2026-07-17",
+   "play": 2,
+   "new_user": 2,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-18",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-19",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-20",
+   "play": 8,
+   "new_user": 1,
+   "revisit_user": 2,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-21",
+   "play": 7,
+   "new_user": 4,
+   "revisit_user": 1,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-22",
+   "play": 1,
+   "new_user": 0,
+   "revisit_user": 1,
+   "follow_contribution": 0,
+   "follow": 3
+  },
+  {
+   "date": "2026-07-23",
+   "play": 1,
+   "new_user": 0,
+   "revisit_user": 1,
+   "follow_contribution": 0,
+   "follow": 2
+  },
+  {
+   "date": "2026-07-24",
+   "play": 11,
+   "new_user": 4,
+   "revisit_user": 3,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-25",
+   "play": 378,
+   "new_user": 249,
+   "revisit_user": 52,
+   "follow_contribution": 0,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-26",
+   "play": 486,
+   "new_user": 295,
+   "revisit_user": 77,
+   "follow_contribution": 1,
+   "follow": 1
+  },
+  {
+   "date": "2026-07-27",
+   "play": 477,
+   "new_user": 296,
+   "revisit_user": 97,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-07-28",
+   "play": 289,
+   "new_user": 158,
+   "revisit_user": 68,
+   "follow_contribution": 1,
+   "follow": 2
+  },
+  {
+   "date": "2026-07-29",
+   "play": 114,
+   "new_user": 59,
+   "revisit_user": 19,
+   "follow_contribution": 0,
+   "follow": 3
+  },
+  {
+   "date": "2026-07-30",
+   "play": 289,
+   "new_user": 170,
+   "revisit_user": 63,
+   "follow_contribution": 0,
+   "follow": 5
+  },
+  {
+   "date": "2026-07-31",
+   "play": 70,
+   "new_user": 42,
+   "revisit_user": 11,
+   "follow_contribution": 0,
+   "follow": 3
+  },
+  {
+   "date": "2026-08-01",
+   "play": 37,
+   "new_user": 16,
+   "revisit_user": 8,
+   "follow_contribution": 0,
+   "follow": 2
+  },
+  {
+   "date": "2026-08-02",
+   "play": 228,
+   "new_user": 116,
+   "revisit_user": 44,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-08-03",
+   "play": 82,
+   "new_user": 42,
+   "revisit_user": 16,
+   "follow_contribution": 0,
+   "follow": 0
+  }
+ ],
+ "entry_points": [
+  {
+   "name": "네이버 홈",
+   "play": 21062,
+   "ratio": 91.6
+  },
+  {
+   "name": "네이버 통합 검색",
+   "play": 795,
+   "ratio": 3.4
+  },
+  {
+   "name": "기타",
+   "play": 376,
+   "ratio": 1.6
+  },
+  {
+   "name": "클립프로필 엔드뷰어",
+   "play": 173,
+   "ratio": 0.7
+  },
+  {
+   "name": "알림",
+   "play": 157,
+   "ratio": 0.6
+  },
+  {
+   "name": "네이버 클립 추천",
+   "play": 134,
+   "ratio": 0.5
+  },
+  {
+   "name": "클립 프로필 동영상 탭",
+   "play": 128,
+   "ratio": 0.5
+  },
+  {
+   "name": "네이버 클립 검색",
+   "play": 67,
+   "ratio": 0.2
+  },
+  {
+   "name": "네이버 클립 추천 카드",
+   "play": 41,
+   "ratio": 0.1
+  },
+  {
+   "name": "네이버 클립 구독",
+   "play": 18,
+   "ratio": 0.0
+  },
+  {
+   "name": "스포츠",
+   "play": 10,
+   "ratio": 0.0
+  },
+  {
+   "name": "플레이스",
+   "play": 7,
+   "ratio": 0.0
+  },
+  {
+   "name": "네이버 클립 (구)추천",
+   "play": 4,
+   "ratio": 0.0
+  },
+  {
+   "name": "연예",
+   "play": 3,
+   "ratio": 0.0
+  },
+  {
+   "name": "네이버 클립 해시태그 그리드뷰",
+   "play": 3,
+   "ratio": 0.0
+  }
+ ],
+ "age_gender": [
+  {
+   "age": "AGE_10",
+   "gender": "MALE",
+   "play": 42,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_10",
+   "gender": "FEMALE",
+   "play": 20,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_20",
+   "gender": "MALE",
+   "play": 151,
+   "ratio": 1
+  },
+  {
+   "age": "AGE_20",
+   "gender": "FEMALE",
+   "play": 162,
+   "ratio": 1
+  },
+  {
+   "age": "AGE_30",
+   "gender": "MALE",
+   "play": 792,
+   "ratio": 3
+  },
+  {
+   "age": "AGE_30",
+   "gender": "FEMALE",
+   "play": 1238,
+   "ratio": 5
+  },
+  {
+   "age": "AGE_40",
+   "gender": "MALE",
+   "play": 4343,
+   "ratio": 19
+  },
+  {
+   "age": "AGE_40",
+   "gender": "FEMALE",
+   "play": 5895,
+   "ratio": 26
+  },
+  {
+   "age": "AGE_50",
+   "gender": "MALE",
+   "play": 4077,
+   "ratio": 18
+  },
+  {
+   "age": "AGE_50",
+   "gender": "FEMALE",
+   "play": 3788,
+   "ratio": 17
+  },
+  {
+   "age": "AGE_60_UP",
+   "gender": "MALE",
+   "play": 1236,
+   "ratio": 5
+  },
+  {
+   "age": "AGE_60_UP",
+   "gender": "FEMALE",
+   "play": 973,
+   "ratio": 4
+  }
+ ],
+ "clips": [
+  {
+   "no": 5352411,
+   "video_id": "D04CEA4DFE2598AB9B26EE6E274F3997B3E5",
+   "title": "마스크 유막제거와 기본 관리법",
+   "description": "마스크 유막제거와 기본 관리법\n\n프리다이빙하고 나시면 마스크에 유막이 껴서\n앞이 습해지고 잘 안보였던 경우 있으시죠?\n\n#물만난약사 #마스크관리 #유막제거 #프리다이빙 #오늘클립챌린지",
+   "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA3MjRfMTE1/MDAxNzg0ODgxMzM0NDMz.iYqc18PrKfMXogIzpLSR1j5b5uOl-Eoif-HjOB40GwUg.CEscFBw5LgU3ySAJt5ZT6Twtgn-MAWC-SvF5UWt1LxQg.JPEG/thumbnail-FE0547F8-69D0-46E2-9904-631EA388EDA0.jpg",
+   "posted_at": "2026-07-24T17:22:20.000+09:00",
+   "duration": 90.0,
+   "play": 292,
+   "like": 3,
+   "category": "OUTDOOR/WATERACTIVITIES",
+   "exposure_status": "EXPOSURE",
+   "deleted": false,
+   "unique_user": 244,
+   "exposure": 213,
+   "click": 13,
+   "click_rate": 6.1,
+   "entry_points": [
+    {
+     "name": "네이버 홈",
+     "play": 259,
+     "ratio": 87.5
+    },
+    {
+     "name": "기타",
+     "play": 16,
+     "ratio": 5.4
+    },
+    {
+     "name": "클립프로필 엔드뷰어",
+     "play": 8,
+     "ratio": 2.7
+    },
+    {
+     "name": "네이버 클립 추천",
+     "play": 5,
+     "ratio": 1.6
+    },
+    {
+     "name": "네이버 통합 검색",
+     "play": 5,
+     "ratio": 1.6
+    },
+    {
+     "name": "네이버 클립 구독",
+     "play": 2,
+     "ratio": 0.6
+    },
+    {
+     "name": "네이버 클립 검색",
+     "play": 1,
+     "ratio": 0.3
+    }
+   ],
+   "age_gender": [
+    {
+     "age": "AGE_10",
+     "gender": "MALE",
+     "play": 0,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_10",
+     "gender": "FEMALE",
+     "play": 2,
+     "ratio": 1
+    },
+    {
+     "age": "AGE_20",
+     "gender": "MALE",
+     "play": 2,
+     "ratio": 1
+    },
+    {
+     "age": "AGE_20",
+     "gender": "FEMALE",
+     "play": 6,
+     "ratio": 2
+    },
+    {
+     "age": "AGE_30",
+     "gender": "MALE",
+     "play": 5,
+     "ratio": 2
+    },
+    {
+     "age": "AGE_30",
+     "gender": "FEMALE",
+     "play": 5,
+     "ratio": 2
+    },
+    {
+     "age": "AGE_40",
+     "gender": "MALE",
+     "play": 46,
+     "ratio": 16
+    },
+    {
+     "age": "AGE_40",
+     "gender": "FEMALE",
+     "play": 62,
+     "ratio": 21
+    },
+    {
+     "age": "AGE_50",
+     "gender": "MALE",
+     "play": 55,
+     "ratio": 19
+    },
+    {
+     "age": "AGE_50",
+     "gender": "FEMALE",
+     "play": 55,
+     "ratio": 19
+    },
+    {
+     "age": "AGE_60_UP",
+     "gender": "MALE",
+     "play": 25,
+     "ratio": 9
+    },
+    {
+     "age": "AGE_60_UP",
+     "gender": "FEMALE",
+     "play": 29,
+     "ratio": 10
+    }
+   ],
+   "last_seen": "2026-08-05T02:11:39.364334+09:00"
+  },
+  {
+   "no": 5142740,
+   "video_id": "0B7EB965D4765B871AA0FB95FB591D5D810E",
+   "title": "‘물 만난 약사’입니다. 🤿",
+   "description": "‘물 만난 약사’입니다. 🤿\n\n앞으로 이곳에서\n프리다이빙과 스쿠버다이빙, 장비 선택법,\n수중 사진과 영상 촬영 이야기를 쉽고 재미있게 전해드릴게요.\n\n물속에서 가장 자유로운 순간을 기록할게요\n\n#물만난약사 #프리다이빙 #스킨스쿠버 #오늘클립챌린지",
+   "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA3MTZfMTIz/MDAxNzg0MTg4MTcwNzEz.dMiO6A91KG8HxGCIg66rtFdGKn7Siqoo1TsQSFPxki4g.nVa0-jiMh7sa2jnhn3WAF4oLdEscxQJinl5N9ZV3nDAg.JPEG/thumbnail-102DCF43-F7D7-413E-9C4A-642AEF105E02.jpg",
+   "posted_at": "2026-07-16T16:49:35.000+09:00",
+   "duration": 20.851,
+   "play": 2021,
+   "like": 6,
+   "category": "OUTDOOR/WATERACTIVITIES",
+   "exposure_status": "EXPOSURE",
+   "deleted": false,
+   "unique_user": 1572,
+   "exposure": 1593,
+   "click": 93,
+   "click_rate": 5.8,
+   "entry_points": [
+    {
+     "name": "네이버 홈",
+     "play": 1972,
+     "ratio": 90.2
+    },
+    {
+     "name": "기타",
+     "play": 133,
+     "ratio": 6.0
+    },
+    {
+     "name": "네이버 클립 추천",
+     "play": 45,
+     "ratio": 2.0
+    },
+    {
+     "name": "네이버 통합 검색",
+     "play": 13,
+     "ratio": 0.5
+    },
+    {
+     "name": "클립프로필 엔드뷰어",
+     "play": 9,
+     "ratio": 0.4
+    },
+    {
+     "name": "네이버 클립 구독",
+     "play": 9,
+     "ratio": 0.4
+    },
+    {
+     "name": "네이버 클립 (구)추천",
+     "play": 2,
+     "ratio": 0.0
+    },
+    {
+     "name": "알림",
+     "play": 1,
+     "ratio": 0.0
+    }
+   ],
+   "age_gender": [
+    {
+     "age": "AGE_10",
+     "gender": "MALE",
+     "play": 2,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_10",
+     "gender": "FEMALE",
+     "play": 1,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_20",
+     "gender": "MALE",
+     "play": 8,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_20",
+     "gender": "FEMALE",
+     "play": 9,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_30",
+     "gender": "MALE",
+     "play": 36,
+     "ratio": 2
+    },
+    {
+     "age": "AGE_30",
+     "gender": "FEMALE",
+     "play": 95,
+     "ratio": 4
+    },
+    {
+     "age": "AGE_40",
+     "gender": "MALE",
+     "play": 294,
+     "ratio": 14
+    },
+    {
+     "age": "AGE_40",
+     "gender": "FEMALE",
+     "play": 552,
+     "ratio": 25
+    },
+    {
+     "age": "AGE_50",
+     "gender": "MALE",
+     "play": 341,
+     "ratio": 16
+    },
+    {
+     "age": "AGE_50",
+     "gender": "FEMALE",
+     "play": 534,
+     "ratio": 25
+    },
+    {
+     "age": "AGE_60_UP",
+     "gender": "MALE",
+     "play": 150,
+     "ratio": 7
+    },
+    {
+     "age": "AGE_60_UP",
+     "gender": "FEMALE",
+     "play": 149,
+     "ratio": 7
+    }
+   ],
+   "last_seen": "2026-08-05T02:11:39.364334+09:00"
+  }
+ ],
+ "error": null
+}

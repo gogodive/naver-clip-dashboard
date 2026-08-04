@@ -1,0 +1,140 @@
+{
+ "naver_id": "freelife1245",
+ "name": "뉴욕출신 요기니다이버의 옷장",
+ "clip_id": "ootd_diver",
+ "profile_key": "ZCEHs2iOveGlbxD3n1MZ",
+ "nickname": "뉴욕출신 요기니다이버의 옷장",
+ "followers": 0,
+ "registered_at": "2026-07-07T14:55:42.000",
+ "fetched_at": "2026-08-05T02:11:39.364334+09:00",
+ "data_through": null,
+ "data_from": null,
+ "totals": {
+  "play": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "unique_user": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "like": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "follow_contribution": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "exposure": null,
+  "click": null,
+  "click_rate": null
+ },
+ "recent7": {
+  "play": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "unique_user": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "like": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "follow_contribution": {
+   "count": null,
+   "diff_rate": null,
+   "diff_type": null
+  },
+  "exposure": null,
+  "click": null,
+  "click_rate": null
+ },
+ "daily": [],
+ "entry_points": [],
+ "age_gender": [
+  {
+   "age": "AGE_10",
+   "gender": "MALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_10",
+   "gender": "FEMALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_20",
+   "gender": "MALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_20",
+   "gender": "FEMALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_30",
+   "gender": "MALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_30",
+   "gender": "FEMALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_40",
+   "gender": "MALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_40",
+   "gender": "FEMALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_50",
+   "gender": "MALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_50",
+   "gender": "FEMALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_60_UP",
+   "gender": "MALE",
+   "play": 0,
+   "ratio": 0
+  },
+  {
+   "age": "AGE_60_UP",
+   "gender": "FEMALE",
+   "play": 0,
+   "ratio": 0
+  }
+ ],
+ "clips": [],
+ "error": null
+}

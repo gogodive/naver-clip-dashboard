@@ -1,0 +1,17 @@
+accounts:
+  - name: 뉴욕출신 요기니다이버의 옷장
+    naver_id: freelife1245
+  - name: 운동하는 디자이너
+    naver_id: so_younique
+  - name: 물 만난 약사
+    naver_id: funfun_seoki
+
+# 세션 쿠키 보관 위치 (리포지토리 밖 — 공개 리포에 자격증명이 들어가면 안 된다)
+profiles_dir: "../profiles"
+
+# 허브 페이지 최상단 콜아웃에 마지막 실행 상태를 기록 (NOTION_TOKEN 있을 때만)
+notion:
+  hub_page_id: "3b239eba97ed80afb476ea4f792ddf1b"
+
+# 클립 단위 상세 지표(유입처·연령성별)를 받아올 최대 개수 — 최근 것부터
+clip_detail_limit: 60

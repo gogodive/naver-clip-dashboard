@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>자사 네이버 클립 성과</title>
+<style>
+  :root { --line:#e5e5e5; --sub:#767676; --accent:#03c75a; --up:#e0342b; --down:#1a6ef5; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+         background:#f7f8f9; color:#1a1a1a; }
+  a { color:inherit; }
+  header { background:#fff; border-bottom:1px solid var(--line); padding:14px 16px;
+           display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  header h1 { font-size:17px; }
+  header .updated { color:var(--sub); font-size:12px; }
+  nav { background:#fff; border-bottom:1px solid var(--line); display:flex;
+        overflow-x:auto; position:sticky; top:0; z-index:5; }
+  nav button { flex:1; min-width:130px; padding:12px 8px; border:0; background:none;
+               font-size:14px; cursor:pointer; border-bottom:2px solid transparent; color:var(--sub); }
+  nav button.active { color:#1a1a1a; font-weight:600; border-bottom-color:var(--accent); }
+  .wrap { max-width:960px; margin:0 auto; padding:0 16px 48px; }
+  .meta { padding:14px 0 10px; font-size:13px; color:var(--sub); }
+  .meta a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .warn { background:#fff4f4; border:1px solid #ffc9c9; border-radius:8px;
+          padding:10px 14px; font-size:13px; color:#c22; margin-bottom:14px; }
+  .warn code { background:#fff; padding:1px 6px; border-radius:4px; font-size:12px; }
+  .stale { background:#fff8e1; border:1px solid #ffe082; border-radius:8px;
+           padding:10px 14px; font-size:13px; color:#8d6e00; margin-bottom:14px; }
+  h2 { font-size:14px; margin:22px 0 10px; display:flex; align-items:baseline; gap:8px; }
+  h2 small { font-weight:400; color:var(--sub); font-size:12px; }
+  .kpis { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
+  .kpi { background:#fff; border:1px solid var(--line); border-radius:10px; padding:12px 14px; }
+  .kpi .k { font-size:12px; color:var(--sub); }
+  .kpi .v { font-size:21px; font-weight:700; margin-top:3px; letter-spacing:-.4px; }
+  .kpi .d { font-size:11px; margin-top:2px; color:var(--sub); }
+  .kpi .d.up { color:var(--up); } .kpi .d.down { color:var(--down); }
+  .panel { background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px; }
+  .chartbox { position:relative; height:300px; }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .bars { list-style:none; }
+  .bars li { margin-bottom:9px; font-size:12px; }
+  .bars .row { display:flex; justify-content:space-between; margin-bottom:3px; }
+  .bars .name { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; padding-right:8px; }
+  .bars .val { color:var(--sub); flex-shrink:0; }
+  .track { background:#eef0f2; border-radius:3px; height:6px; overflow:hidden; }
+  .track i { display:block; height:100%; background:var(--accent); border-radius:3px; }
+  .ag { list-style:none; }
+  .ag li { display:grid; grid-template-columns:44px 1fr; gap:8px; align-items:center;
+           margin-bottom:8px; font-size:12px; }
+  .ag .lbl { color:var(--sub); }
+  .ag .pair { display:grid; gap:3px; }
+  .ag .b { display:flex; align-items:center; gap:6px; }
+  .ag .b i { display:block; height:7px; border-radius:3px; }
+  .ag .b.f i { background:#03c75a; } .ag .b.m i { background:#4d7cfe; }
+  .ag .b span { color:var(--sub); font-size:11px; }
+  .gender { font-size:12px; color:var(--sub); margin-bottom:10px; }
+  .gender b.f { color:#03c75a; } .gender b.m { color:#4d7cfe; }
+  .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden;
+          display:flex; flex-direction:column; }
+  .card.hot { border:2px solid #ff9800; box-shadow:0 0 12px rgba(255,152,0,.35); }
+  .card.gone { opacity:.55; }
+  .thumb { position:relative; display:block; aspect-ratio:9/16; background:#e9ecef; }
+  .thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+  .badge { position:absolute; top:8px; left:8px; font-size:11px; padding:2px 8px;
+           border-radius:10px; color:#fff; background:rgba(0,0,0,.6); }
+  .badge.hot { left:auto; right:8px; background:#ff5722; font-weight:700; font-size:14px;
+               padding:4px 10px; border-radius:13px; box-shadow:0 2px 8px rgba(255,87,34,.5); }
+  .badge.gone { background:#8e8e8e; }
+  .info { padding:10px 12px; }
+  .date { font-size:11px; color:var(--sub); }
+  .title { font-size:13px; margin:4px 0 8px; line-height:1.35; max-height:2.7em; overflow:hidden; }
+  .metrics { display:flex; flex-wrap:wrap; gap:6px 12px; font-size:12px; color:#333; }
+  .empty { text-align:center; color:var(--sub); padding:48px 0; grid-column:1/-1;
+           background:#fff; border:1px dashed var(--line); border-radius:10px; }
+  .note { font-size:11px; color:var(--sub); margin-top:10px; line-height:1.6; }
+  section { display:none; } section.active { display:block; }
+  @media (max-width:820px){ .kpis{ grid-template-columns:repeat(3,1fr); } .two{ grid-template-columns:1fr; }
+    .grid{ grid-template-columns:repeat(2,1fr); gap:10px; } }
+  @media (max-width:520px){ .kpis{ grid-template-columns:repeat(2,1fr); } .chartbox{ height:240px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>자사 네이버 클립 성과</h1>
+  <span class="updated">마지막 갱신: {{ generated_label }} (매일 05:00 자동 갱신)</span>
+</header>
+<nav>
+  {% for acc in accounts %}
+  <button data-tab="{{ loop.index0 }}"{% if loop.first %} class="active"{% endif %}>{{ acc.name }}</button>
+  {% endfor %}
+</nav>
+
+{% for acc in accounts %}
+<section id="tab-{{ loop.index0 }}"{% if loop.first %} class="active"{% endif %}>
+<div class="wrap">
+
+  <div class="meta">
+    {% if acc.clip_id %}<a href="https://clip.naver.com/@{{ acc.clip_id }}" target="_blank" rel="noopener">@{{ acc.clip_id }}</a>{% else %}{{ acc.naver_id }}{% endif %}
+    {% if acc.followers is not none %} · 팔로워 {{ acc.followers | num }}{% endif %}
+    {% if acc.data_through %} · 데이터 기준 {{ acc.data_through }}{% endif %}
+    {% if acc._live_clips %} · 클립 {{ acc._live_clips }}건{% endif %}
+    {% if acc._deleted_clips %} (삭제 {{ acc._deleted_clips }}건){% endif %}
+  </div>
+
+  {% if acc.error == "session" %}
+  <div class="warn">🚨 <b>{{ acc.naver_id }}</b> 네이버 세션이 만료됐습니다 — 아래 화면은 이전 수집 데이터입니다.<br>
+    터미널에서 <code>.venv/bin/python -m src.setup_login {{ acc.naver_id }}</code> 를 실행해 다시 로그인하세요.</div>
+  {% elif acc.error %}
+  <div class="stale">⚠️ 이번 수집에 실패했습니다 — 아래 화면은 이전 데이터입니다.</div>
+  {% endif %}
+
+  {% if acc.recent7 %}
+  <h2>최근 7일 <small>이전 7일 대비</small></h2>
+  <div class="kpis">
+    <div class="kpi"><div class="k">조회수</div><div class="v">{{ acc.recent7.play.count | num }}</div>
+      {% if acc.recent7.play.diff_rate is not none %}
+      <div class="d {{ 'up' if acc.recent7.play.diff_type == 'UP' else ('down' if acc.recent7.play.diff_type == 'DOWN' else '') }}">
+        {% if acc.recent7.play.diff_type == 'UP' %}▲{% elif acc.recent7.play.diff_type == 'DOWN' %}▼{% else %}–{% endif %}
+        {{ acc.recent7.play.diff_rate }}%</div>{% endif %}</div>
+    <div class="kpi"><div class="k">순 시청자수</div><div class="v">{{ acc.recent7.unique_user.count | num }}</div>
+      {% if acc.recent7.unique_user.diff_rate is not none %}
+      <div class="d {{ 'up' if acc.recent7.unique_user.diff_type == 'UP' else ('down' if acc.recent7.unique_user.diff_type == 'DOWN' else '') }}">
+        {% if acc.recent7.unique_user.diff_type == 'UP' %}▲{% elif acc.recent7.unique_user.diff_type == 'DOWN' %}▼{% else %}–{% endif %}
+        {{ acc.recent7.unique_user.diff_rate }}%</div>{% endif %}</div>
+    <div class="kpi"><div class="k">팔로우 기여</div><div class="v">{{ acc.recent7.follow_contribution.count | num }}</div></div>
+    <div class="kpi"><div class="k">노출수</div><div class="v">{{ acc.recent7.exposure | num }}</div></div>
+    <div class="kpi"><div class="k">클릭수</div><div class="v">{{ acc.recent7.click | num }}</div></div>
+    <div class="kpi"><div class="k">클릭률</div><div class="v">{{ acc.recent7.click_rate if acc.recent7.click_rate is not none else '–' }}%</div></div>
+  </div>
+  {% endif %}
+
+  {% if acc.totals %}
+  <h2>전체 누적 {% if acc.data_from and acc.data_through %}<small>{{ acc.data_from }} ~ {{ acc.data_through }}</small>{% endif %}</h2>
+  <div class="kpis">
+    <div class="kpi"><div class="k">조회수</div><div class="v">{{ acc.totals.play.count | num }}</div></div>
+    <div class="kpi"><div class="k">순 시청자수</div><div class="v">{{ acc.totals.unique_user.count | num }}</div></div>
+    <div class="kpi"><div class="k">팔로우 기여</div><div class="v">{{ acc.totals.follow_contribution.count | num }}</div></div>
+    <div class="kpi"><div class="k">노출수</div><div class="v">{{ acc.totals.exposure | num }}</div></div>
+    <div class="kpi"><div class="k">클릭수</div><div class="v">{{ acc.totals.click | num }}</div></div>
+    <div class="kpi"><div class="k">클릭률</div><div class="v">{{ acc.totals.click_rate if acc.totals.click_rate is not none else '–' }}%</div></div>
+  </div>
+  {% endif %}
+
+  {% if acc._has_chart %}
+  <h2>일자별 추이 <small>조회수 · 시청자수</small></h2>
+  <div class="panel"><div class="chartbox"><canvas id="chart-{{ loop.index0 }}"></canvas></div></div>
+  {% endif %}
+
+  {% if acc._entry_rows or acc._age_rows %}
+  <div class="two" style="margin-top:22px">
+    {% if acc._entry_rows %}
+    <div>
+      <h2>유입처별 조회 비율 <small>전체 기간</small></h2>
+      <div class="panel"><ul class="bars">
+        {% for e in acc._entry_rows %}
+        <li><div class="row"><span class="name">{{ e.name }}</span>
+              <span class="val">{{ e.play | num }}회 · {{ e.ratio }}%</span></div>
+            <div class="track"><i style="width:{{ e.ratio }}%"></i></div></li>
+        {% endfor %}
+      </ul></div>
+    </div>
+    {% endif %}
+    {% if acc._age_rows %}
+    <div>
+      <h2>연령 및 성별 <small>전체 기간</small></h2>
+      <div class="panel">
+        <div class="gender">여성 <b class="f">{{ acc._gender.female }}%</b> · 남성 <b class="m">{{ acc._gender.male }}%</b></div>
+        <ul class="ag">
+          {% for r in acc._age_rows %}
+          <li><span class="lbl">{{ r.age }}</span>
+            <span class="pair">
+              <span class="b f"><i style="width:{{ r.female_w }}%"></i><span>{{ r.female }}%</span></span>
+              <span class="b m"><i style="width:{{ r.male_w }}%"></i><span>{{ r.male }}%</span></span>
+            </span></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <h2>클립별 성과 <small>조회수는 누적 · 🔥는 계정 내 중앙값 2배 이상</small></h2>
+  <div class="grid">
+    {% for c in acc.clips %}
+    <div class="card{% if c._hot %} hot{% endif %}{% if c.deleted %} gone{% endif %}">
+      <a class="thumb" href="https://clipcreators.naver.com/web/analysis/clip/{{ c.no }}"
+         target="_blank" rel="noopener">
+        {% if c.deleted %}<span class="badge gone">삭제됨</span>
+        {% elif c._days is not none %}<span class="badge">D+{{ c._days }}</span>{% endif %}
+        {% if c._hot %}<span class="badge hot">{{ c._hot }}</span>{% endif %}
+        <img src="{{ c.thumbnail }}" alt="" loading="lazy">
+      </a>
+      <div class="info">
+        <div class="date">{{ c.posted_at | date }}{% if c.duration %} · {{ c.duration | int }}초{% endif %}</div>
+        <div class="title">{{ c.title }}</div>
+        <div class="metrics">
+          <span>▶ <b>{{ c.play | num }}</b></span>
+          <span>❤️ <b>{{ c.like | num }}</b></span>
+          {% if c.click_rate is not none %}<span>👆 <b>{{ c.click_rate }}%</b></span>{% endif %}
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <div class="empty">아직 게시된 클립이 없습니다</div>
+    {% endfor %}
+  </div>
+
+  {% if acc._deleted_clips %}
+  <p class="note">※ 삭제된 클립은 콘텐츠 목록에서 사라지지만 계정 전체 조회수에는 그 몫이 남습니다.
+     그래서 <b>전체 누적 조회수</b>가 위 클립들의 조회수 합보다 클 수 있습니다.</p>
+  {% endif %}
+
+</div>
+</section>
+{% endfor %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const CHART_DATA = {{ chart_json | safe }};
+const made = {};
+
+function initChart(i) {
+  const cd = CHART_DATA[i];
+  if (made[i] || !cd || !window.Chart) return;
+  made[i] = true;
+  const GRID = "#eef0f2", MUTED = "#8b8b8b";
+  new Chart(document.getElementById("chart-" + i), {
+    type: "line",
+    data: {
+      labels: cd.labels,
+      datasets: [
+        {label: "조회수", data: cd.play, borderColor: "#03c75a",
+         backgroundColor: "rgba(3,199,90,.12)", fill: true, tension: .3,
+         pointRadius: 0, pointHoverRadius: 5, borderWidth: 2},
+        {label: "시청자수", data: cd.viewer, borderColor: "#4d7cfe",
+         fill: false, tension: .3, pointRadius: 0, pointHoverRadius: 5, borderWidth: 2}
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: false,
+      interaction: {mode: "index", intersect: false},
+      plugins: {
+        legend: {position: "top", align: "end",
+                 labels: {boxWidth: 10, boxHeight: 10, usePointStyle: true, pointStyle: "circle",
+                          color: MUTED, font: {size: 11}}},
+        tooltip: {displayColors: true}
+      },
+      scales: {
+        x: {grid: {display: false}, border: {color: GRID},
+            ticks: {color: MUTED, maxTicksLimit: 8, font: {size: 11}}},
+        y: {beginAtZero: true, grid: {color: GRID}, border: {display: false},
+            ticks: {color: MUTED, font: {size: 11},
+                    callback: v => v >= 10000 ? (Math.round(v/1000)/10) + "만"
+                              : v >= 1000 ? (Math.round(v/100)/10) + "천" : v}}
+      }
+    }
+  });
+}
+
+document.querySelectorAll("nav button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("nav button").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
+    initChart(Number(btn.dataset.tab));
+  });
+});
+initChart(0);
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+# 세션 쿠키는 리포지토리 밖(../profiles)에 두지만 실수 방지용으로 한 번 더 막는다
+profiles/
+*session_cookies.json
