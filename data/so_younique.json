@@ -4,9 +4,9 @@
  "clip_id": "so_younique",
  "profile_key": "4FGok2e8KK5bEKb6O57U",
  "nickname": "운동하는 디자이너",
- "followers": 19,
+ "followers": 21,
  "registered_at": "2026-07-07T13:13:48.000",
- "fetched_at": "2026-08-12T05:00:03.338269+09:00",
+ "fetched_at": "2026-08-13T05:00:02.288664+09:00",
  "data_through": null,
  "data_from": null,
  "totals": {
@@ -299,6 +299,46 @@
    "revisit_user": 0,
    "follow_contribution": 0,
    "follow": 1
+  },
+  {
+   "date": "2026-08-07",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-08-08",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-08-09",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-08-10",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-08-11",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
   }
  ],
  "entry_points": [],
@@ -378,6 +418,6 @@
  ],
  "clips": [],
  "error": null,
- "session_days_left": 22.9,
+ "session_days_left": 21.9,
  "has_credentials": true
 }
