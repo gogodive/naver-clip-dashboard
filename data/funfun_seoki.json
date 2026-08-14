@@ -4,19 +4,19 @@
  "clip_id": "funfun_seoki",
  "profile_key": "dPxqMETGKSZjVeVkDp30",
  "nickname": "물 만난 약사",
- "followers": 80,
+ "followers": 81,
  "registered_at": "2026-06-02T09:35:44.000",
- "fetched_at": "2026-08-14T05:00:01.564535+09:00",
- "data_through": "2026-08-12",
+ "fetched_at": "2026-08-15T05:00:01.788906+09:00",
+ "data_through": "2026-08-13",
  "data_from": "2026-07-16",
  "totals": {
   "play": {
-   "count": 24727,
+   "count": 24812,
    "diff_rate": null,
    "diff_type": null
   },
   "unique_user": {
-   "count": 12279,
+   "count": 12326,
    "diff_rate": null,
    "diff_type": null
   },
@@ -30,19 +30,19 @@
    "diff_rate": null,
    "diff_type": null
   },
-  "exposure": 38612,
-  "click": 2110,
+  "exposure": 38738,
+  "click": 2119,
   "click_rate": 5.5
  },
  "recent7": {
   "play": {
-   "count": 1484,
-   "diff_rate": 52.8,
+   "count": 1170,
+   "diff_rate": 8.2,
    "diff_type": "UP"
   },
   "unique_user": {
-   "count": 1032,
-   "diff_rate": 46.2,
+   "count": 799,
+   "diff_rate": 3.1,
    "diff_type": "UP"
   },
   "like": {
@@ -55,9 +55,9 @@
    "diff_rate": null,
    "diff_type": null
   },
-  "exposure": 2864,
-  "click": 138,
-  "click_rate": 4.8
+  "exposure": 2003,
+  "click": 107,
+  "click_rate": 5.3
  },
  "daily": [
   {
@@ -627,22 +627,30 @@
    "revisit_user": 30,
    "follow_contribution": 0,
    "follow": 1
+  },
+  {
+   "date": "2026-08-13",
+   "play": 85,
+   "new_user": 47,
+   "revisit_user": 14,
+   "follow_contribution": 0,
+   "follow": 0
   }
  ],
  "entry_points": [
   {
    "name": "네이버 홈",
-   "play": 22688,
+   "play": 22760,
    "ratio": 91.7
   },
   {
    "name": "네이버 통합 검색",
-   "play": 872,
+   "play": 878,
    "ratio": 3.5
   },
   {
    "name": "기타",
-   "play": 404,
+   "play": 406,
    "ratio": 1.6
   },
   {
@@ -657,7 +665,7 @@
   },
   {
    "name": "네이버 클립 추천",
-   "play": 137,
+   "play": 140,
    "ratio": 0.5
   },
   {
@@ -667,7 +675,7 @@
   },
   {
    "name": "네이버 클립 검색",
-   "play": 69,
+   "play": 71,
    "ratio": 0.2
   },
   {
@@ -722,7 +730,7 @@
   {
    "age": "AGE_20",
    "gender": "MALE",
-   "play": 165,
+   "play": 167,
    "ratio": 1
   },
   {
@@ -734,37 +742,37 @@
   {
    "age": "AGE_30",
    "gender": "MALE",
-   "play": 868,
+   "play": 869,
    "ratio": 4
   },
   {
    "age": "AGE_30",
    "gender": "FEMALE",
-   "play": 1336,
+   "play": 1340,
    "ratio": 5
   },
   {
    "age": "AGE_40",
    "gender": "MALE",
-   "play": 4662,
+   "play": 4691,
    "ratio": 19
   },
   {
    "age": "AGE_40",
    "gender": "FEMALE",
-   "play": 6183,
+   "play": 6198,
    "ratio": 25
   },
   {
    "age": "AGE_50",
    "gender": "MALE",
-   "play": 4509,
+   "play": 4531,
    "ratio": 18
   },
   {
    "age": "AGE_50",
    "gender": "FEMALE",
-   "play": 4084,
+   "play": 4096,
    "ratio": 17
   },
   {
@@ -789,25 +797,30 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA4MTFfMTg1/MDAxNzg2NDM3MTg3NzQy.udqy3sU0ikc25S-GR5NgY98YoAqrc-KdvPIRzNt9UxUg.lnQhVOmA0afliv0H3RZVVjrPAzLgrt-7-SlMbIQ-Db8g.JPEG/thumbnail-51A949E1-0EFE-4676-B318-F490A625D3C3.jpg",
    "posted_at": "2026-08-11T17:33:14.000+09:00",
    "duration": 42.097,
-   "play": 8,
+   "play": 14,
    "like": 1,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
    "deleted": false,
-   "unique_user": 5,
-   "exposure": 4,
+   "unique_user": 7,
+   "exposure": 13,
    "click": 1,
-   "click_rate": 25.0,
+   "click_rate": 7.7,
    "entry_points": [
     {
      "name": "네이버 통합 검색",
-     "play": 3,
-     "ratio": 75.0
+     "play": 5,
+     "ratio": 71.4
     },
     {
      "name": "클립프로필 엔드뷰어",
      "play": 1,
-     "ratio": 25.0
+     "ratio": 14.2
+    },
+    {
+     "name": "네이버 클립 검색",
+     "play": 1,
+     "ratio": 14.2
     }
    ],
    "age_gender": [
@@ -844,14 +857,14 @@
     {
      "age": "AGE_30",
      "gender": "FEMALE",
-     "play": 3,
-     "ratio": 75
+     "play": 5,
+     "ratio": 71
     },
     {
      "age": "AGE_40",
      "gender": "MALE",
-     "play": 0,
-     "ratio": 0
+     "play": 1,
+     "ratio": 14
     },
     {
      "age": "AGE_40",
@@ -863,7 +876,7 @@
      "age": "AGE_50",
      "gender": "MALE",
      "play": 1,
-     "ratio": 25
+     "ratio": 14
     },
     {
      "age": "AGE_50",
@@ -884,7 +897,7 @@
      "ratio": 0
     }
    ],
-   "last_seen": "2026-08-14T05:00:01.564535+09:00"
+   "last_seen": "2026-08-15T05:00:01.788906+09:00"
   },
   {
    "no": 5710713,
@@ -894,25 +907,30 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA4MDdfMjM1/MDAxNzg2MDkyMDkzNzQ0.J2NHleX5XqfwD8KYl-Wpb9RstBw2EI5zKpjww34wyDcg.P4NV2o6jFnh5l_l0drh3Y9YT5XidV_MAmmlGBO3BaQwg.JPEG/thumbnail-43FBEA46-7EBE-4C77-A468-411FF612DBDC.jpg",
    "posted_at": "2026-08-07T17:41:42.000+09:00",
    "duration": 43.792,
-   "play": 52,
+   "play": 59,
    "like": 1,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
    "deleted": false,
-   "unique_user": 39,
-   "exposure": 19,
+   "unique_user": 42,
+   "exposure": 21,
    "click": 0,
    "click_rate": 0.0,
    "entry_points": [
     {
      "name": "네이버 통합 검색",
-     "play": 40,
-     "ratio": 97.5
+     "play": 42,
+     "ratio": 95.4
     },
     {
      "name": "기타",
      "play": 1,
-     "ratio": 2.4
+     "ratio": 2.2
+    },
+    {
+     "name": "네이버 클립 검색",
+     "play": 1,
+     "ratio": 2.2
     }
    ],
    "age_gender": [
@@ -931,8 +949,8 @@
     {
      "age": "AGE_20",
      "gender": "MALE",
-     "play": 1,
-     "ratio": 3
+     "play": 2,
+     "ratio": 5
     },
     {
      "age": "AGE_20",
@@ -944,43 +962,43 @@
      "age": "AGE_30",
      "gender": "MALE",
      "play": 6,
-     "ratio": 16
+     "ratio": 15
     },
     {
      "age": "AGE_30",
      "gender": "FEMALE",
      "play": 10,
-     "ratio": 26
+     "ratio": 24
     },
     {
      "age": "AGE_40",
      "gender": "MALE",
-     "play": 7,
-     "ratio": 18
+     "play": 8,
+     "ratio": 20
     },
     {
      "age": "AGE_40",
      "gender": "FEMALE",
      "play": 5,
-     "ratio": 13
+     "ratio": 12
     },
     {
      "age": "AGE_50",
      "gender": "MALE",
      "play": 3,
-     "ratio": 8
+     "ratio": 7
     },
     {
      "age": "AGE_50",
      "gender": "FEMALE",
-     "play": 1,
-     "ratio": 3
+     "play": 2,
+     "ratio": 5
     },
     {
      "age": "AGE_60_UP",
      "gender": "MALE",
      "play": 3,
-     "ratio": 8
+     "ratio": 7
     },
     {
      "age": "AGE_60_UP",
@@ -989,7 +1007,7 @@
      "ratio": 0
     }
    ],
-   "last_seen": "2026-08-14T05:00:01.564535+09:00"
+   "last_seen": "2026-08-15T05:00:01.788906+09:00"
   },
   {
    "no": 5352411,
@@ -999,30 +1017,30 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA3MjRfMTE1/MDAxNzg0ODgxMzM0NDMz.iYqc18PrKfMXogIzpLSR1j5b5uOl-Eoif-HjOB40GwUg.CEscFBw5LgU3ySAJt5ZT6Twtgn-MAWC-SvF5UWt1LxQg.JPEG/thumbnail-FE0547F8-69D0-46E2-9904-631EA388EDA0.jpg",
    "posted_at": "2026-07-24T17:22:20.000+09:00",
    "duration": 90.0,
-   "play": 568,
+   "play": 1091,
    "like": 4,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
    "deleted": false,
-   "unique_user": 434,
-   "exposure": 887,
-   "click": 60,
-   "click_rate": 6.8,
+   "unique_user": 442,
+   "exposure": 909,
+   "click": 61,
+   "click_rate": 6.7,
    "entry_points": [
     {
      "name": "네이버 홈",
-     "play": 511,
-     "ratio": 89.4
+     "play": 521,
+     "ratio": 89.6
     },
     {
      "name": "기타",
      "play": 19,
-     "ratio": 3.3
+     "ratio": 3.2
     },
     {
      "name": "네이버 통합 검색",
      "play": 18,
-     "ratio": 3.1
+     "ratio": 3.0
     },
     {
      "name": "클립프로필 엔드뷰어",
@@ -1066,7 +1084,7 @@
     {
      "age": "AGE_20",
      "gender": "MALE",
-     "play": 9,
+     "play": 10,
      "ratio": 2
     },
     {
@@ -1078,13 +1096,13 @@
     {
      "age": "AGE_30",
      "gender": "MALE",
-     "play": 20,
+     "play": 21,
      "ratio": 4
     },
     {
      "age": "AGE_30",
      "gender": "FEMALE",
-     "play": 30,
+     "play": 31,
      "ratio": 5
     },
     {
@@ -1096,26 +1114,26 @@
     {
      "age": "AGE_40",
      "gender": "FEMALE",
-     "play": 76,
+     "play": 77,
      "ratio": 13
     },
     {
      "age": "AGE_50",
      "gender": "MALE",
-     "play": 131,
-     "ratio": 23
+     "play": 135,
+     "ratio": 24
     },
     {
      "age": "AGE_50",
      "gender": "FEMALE",
-     "play": 85,
+     "play": 87,
      "ratio": 15
     },
     {
      "age": "AGE_60_UP",
      "gender": "MALE",
      "play": 54,
-     "ratio": 10
+     "ratio": 9
     },
     {
      "age": "AGE_60_UP",
@@ -1124,7 +1142,7 @@
      "ratio": 8
     }
    ],
-   "last_seen": "2026-08-14T05:00:01.564535+09:00"
+   "last_seen": "2026-08-15T05:00:01.788906+09:00"
   },
   {
    "no": 5142740,
@@ -1134,34 +1152,34 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA3MTZfMTIz/MDAxNzg0MTg4MTcwNzEz.dMiO6A91KG8HxGCIg66rtFdGKn7Siqoo1TsQSFPxki4g.nVa0-jiMh7sa2jnhn3WAF4oLdEscxQJinl5N9ZV3nDAg.JPEG/thumbnail-102DCF43-F7D7-413E-9C4A-642AEF105E02.jpg",
    "posted_at": "2026-07-16T16:49:35.000+09:00",
    "duration": 20.851,
-   "play": 3297,
+   "play": 3338,
    "like": 7,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
    "deleted": false,
-   "unique_user": 2581,
-   "exposure": 4185,
-   "click": 208,
+   "unique_user": 2629,
+   "exposure": 4278,
+   "click": 216,
    "click_rate": 5.0,
    "entry_points": [
     {
      "name": "네이버 홈",
-     "play": 3346,
-     "ratio": 92.6
+     "play": 3408,
+     "ratio": 92.5
     },
     {
      "name": "기타",
-     "play": 157,
+     "play": 159,
      "ratio": 4.3
     },
     {
      "name": "네이버 클립 추천",
-     "play": 48,
+     "play": 51,
      "ratio": 1.3
     },
     {
      "name": "네이버 통합 검색",
-     "play": 34,
+     "play": 36,
      "ratio": 0.9
     },
     {
@@ -1219,43 +1237,43 @@
      "age": "AGE_30",
      "gender": "MALE",
      "play": 91,
-     "ratio": 3
+     "ratio": 2
     },
     {
      "age": "AGE_30",
      "gender": "FEMALE",
-     "play": 155,
+     "play": 156,
      "ratio": 4
     },
     {
      "age": "AGE_40",
      "gender": "MALE",
-     "play": 555,
-     "ratio": 15
+     "play": 582,
+     "ratio": 16
     },
     {
      "age": "AGE_40",
      "gender": "FEMALE",
-     "play": 821,
+     "play": 835,
      "ratio": 23
     },
     {
      "age": "AGE_50",
      "gender": "MALE",
-     "play": 693,
+     "play": 711,
      "ratio": 19
     },
     {
      "age": "AGE_50",
      "gender": "FEMALE",
-     "play": 799,
+     "play": 808,
      "ratio": 22
     },
     {
      "age": "AGE_60_UP",
      "gender": "MALE",
      "play": 236,
-     "ratio": 7
+     "ratio": 6
     },
     {
      "age": "AGE_60_UP",
@@ -1264,10 +1282,10 @@
      "ratio": 6
     }
    ],
-   "last_seen": "2026-08-14T05:00:01.564535+09:00"
+   "last_seen": "2026-08-15T05:00:01.788906+09:00"
   }
  ],
  "error": null,
- "session_days_left": 20.9,
+ "session_days_left": 19.9,
  "has_credentials": true
 }
