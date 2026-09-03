@@ -6,7 +6,7 @@
  "nickname": "뉴욕출신 요기니다이버의 옷장",
  "followers": 0,
  "registered_at": "2026-07-07T14:55:42.000",
- "fetched_at": "2026-09-03T05:00:02.636220+09:00",
+ "fetched_at": "2026-09-04T05:00:03.828685+09:00",
  "data_through": null,
  "data_from": null,
  "totals": {
@@ -137,6 +137,6 @@
  ],
  "clips": [],
  "error": null,
- "session_days_left": 26.0,
+ "session_days_left": 25.0,
  "has_credentials": true
 }
