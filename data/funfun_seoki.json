@@ -4,19 +4,19 @@
  "clip_id": "funfun_seoki",
  "profile_key": "dPxqMETGKSZjVeVkDp30",
  "nickname": "물 만난 약사",
- "followers": 95,
+ "followers": 94,
  "registered_at": "2026-06-02T09:35:44.000",
- "fetched_at": "2026-09-09T05:00:02.028539+09:00",
- "data_through": "2026-09-07",
+ "fetched_at": "2026-09-10T05:00:01.994799+09:00",
+ "data_through": "2026-09-08",
  "data_from": "2026-07-16",
  "totals": {
   "play": {
-   "count": 26428,
+   "count": 26433,
    "diff_rate": null,
    "diff_type": null
   },
   "unique_user": {
-   "count": 13189,
+   "count": 13194,
    "diff_rate": null,
    "diff_type": null
   },
@@ -30,19 +30,19 @@
    "diff_rate": null,
    "diff_type": null
   },
-  "exposure": 40746,
+  "exposure": 40759,
   "click": 2243,
   "click_rate": 5.5
  },
  "recent7": {
   "play": {
-   "count": 66,
-   "diff_rate": 19.5,
+   "count": 61,
+   "diff_rate": 23.7,
    "diff_type": "DOWN"
   },
   "unique_user": {
-   "count": 47,
-   "diff_rate": 24.2,
+   "count": 43,
+   "diff_rate": 31.7,
    "diff_type": "DOWN"
   },
   "like": {
@@ -55,9 +55,9 @@
    "diff_rate": null,
    "diff_type": null
   },
-  "exposure": 94,
-  "click": 4,
-  "click_rate": 4.3
+  "exposure": 92,
+  "click": 2,
+  "click_rate": 2.2
  },
  "daily": [
   {
@@ -835,17 +835,25 @@
    "revisit_user": 2,
    "follow_contribution": 0,
    "follow": 1
+  },
+  {
+   "date": "2026-09-08",
+   "play": 5,
+   "new_user": 5,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
   }
  ],
  "entry_points": [
   {
    "name": "네이버 홈",
-   "play": 24141,
+   "play": 24143,
    "ratio": 91.3
   },
   {
    "name": "네이버 통합 검색",
-   "play": 1079,
+   "play": 1082,
    "ratio": 4.0
   },
   {
@@ -918,7 +926,7 @@
   {
    "age": "AGE_10",
    "gender": "MALE",
-   "play": 47,
+   "play": 48,
    "ratio": 0
   },
   {
@@ -936,7 +944,7 @@
   {
    "age": "AGE_20",
    "gender": "FEMALE",
-   "play": 201,
+   "play": 203,
    "ratio": 1
   },
   {
@@ -960,7 +968,7 @@
   {
    "age": "AGE_40",
    "gender": "FEMALE",
-   "play": 6400,
+   "play": 6401,
    "ratio": 25
   },
   {
@@ -978,7 +986,7 @@
   {
    "age": "AGE_60_UP",
    "gender": "MALE",
-   "play": 1418,
+   "play": 1419,
    "ratio": 5
   },
   {
@@ -997,24 +1005,24 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA4MTFfMTg1/MDAxNzg2NDM3MTg3NzQy.udqy3sU0ikc25S-GR5NgY98YoAqrc-KdvPIRzNt9UxUg.lnQhVOmA0afliv0H3RZVVjrPAzLgrt-7-SlMbIQ-Db8g.JPEG/thumbnail-51A949E1-0EFE-4676-B318-F490A625D3C3.jpg",
    "posted_at": "2026-08-11T17:33:14.000+09:00",
    "duration": 42.097,
-   "play": 133,
+   "play": 135,
    "like": 5,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
    "deleted": false,
-   "unique_user": 113,
-   "exposure": 241,
+   "unique_user": 116,
+   "exposure": 254,
    "click": 15,
-   "click_rate": 6.2,
+   "click_rate": 5.9,
    "entry_points": [
     {
      "name": "네이버 홈",
-     "play": 84,
-     "ratio": 63.1
+     "play": 86,
+     "ratio": 63.2
     },
     {
      "name": "네이버 통합 검색",
-     "play": 41,
+     "play": 42,
      "ratio": 30.8
     },
     {
@@ -1025,12 +1033,12 @@
     {
      "name": "네이버 클립 추천",
      "play": 2,
-     "ratio": 1.5
+     "ratio": 1.4
     },
     {
      "name": "네이버 클립 해시태그 그리드뷰",
      "play": 2,
-     "ratio": 1.5
+     "ratio": 1.4
     },
     {
      "name": "네이버 클립 검색",
@@ -1042,8 +1050,8 @@
     {
      "age": "AGE_10",
      "gender": "MALE",
-     "play": 1,
-     "ratio": 1
+     "play": 2,
+     "ratio": 2
     },
     {
      "age": "AGE_10",
@@ -1079,13 +1087,13 @@
      "age": "AGE_40",
      "gender": "MALE",
      "play": 41,
-     "ratio": 32
+     "ratio": 31
     },
     {
      "age": "AGE_40",
      "gender": "FEMALE",
-     "play": 16,
-     "ratio": 12
+     "play": 17,
+     "ratio": 13
     },
     {
      "age": "AGE_50",
@@ -1102,8 +1110,8 @@
     {
      "age": "AGE_60_UP",
      "gender": "MALE",
-     "play": 1,
-     "ratio": 1
+     "play": 2,
+     "ratio": 2
     },
     {
      "age": "AGE_60_UP",
@@ -1112,7 +1120,7 @@
      "ratio": 0
     }
    ],
-   "last_seen": "2026-09-09T05:00:02.028539+09:00"
+   "last_seen": "2026-09-10T05:00:01.994799+09:00"
   },
   {
    "no": 5710713,
@@ -1227,7 +1235,7 @@
      "ratio": 3
     }
    ],
-   "last_seen": "2026-09-09T05:00:02.028539+09:00"
+   "last_seen": "2026-09-10T05:00:01.994799+09:00"
   },
   {
    "no": 5352411,
@@ -1237,12 +1245,12 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA3MjRfMTE1/MDAxNzg0ODgxMzM0NDMz.iYqc18PrKfMXogIzpLSR1j5b5uOl-Eoif-HjOB40GwUg.CEscFBw5LgU3ySAJt5ZT6Twtgn-MAWC-SvF5UWt1LxQg.JPEG/thumbnail-FE0547F8-69D0-46E2-9904-631EA388EDA0.jpg",
    "posted_at": "2026-07-24T17:22:20.000+09:00",
    "duration": 90.0,
-   "play": 1839,
+   "play": 1840,
    "like": 6,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
    "deleted": false,
-   "unique_user": 1360,
+   "unique_user": 1362,
    "exposure": 2502,
    "click": 160,
    "click_rate": 6.4,
@@ -1250,12 +1258,12 @@
     {
      "name": "네이버 홈",
      "play": 1750,
-     "ratio": 93.4
+     "ratio": 93.3
     },
     {
      "name": "네이버 통합 검색",
-     "play": 64,
-     "ratio": 3.4
+     "play": 66,
+     "ratio": 3.5
     },
     {
      "name": "기타",
@@ -1310,7 +1318,7 @@
     {
      "age": "AGE_20",
      "gender": "FEMALE",
-     "play": 22,
+     "play": 24,
      "ratio": 1
     },
     {
@@ -1362,7 +1370,7 @@
      "ratio": 3
     }
    ],
-   "last_seen": "2026-09-09T05:00:02.028539+09:00"
+   "last_seen": "2026-09-10T05:00:01.994799+09:00"
   },
   {
    "no": 5142740,
@@ -1502,10 +1510,10 @@
      "ratio": 6
     }
    ],
-   "last_seen": "2026-09-09T05:00:02.028539+09:00"
+   "last_seen": "2026-09-10T05:00:01.994799+09:00"
   }
  ],
  "error": null,
- "session_days_left": 20.0,
+ "session_days_left": 19.0,
  "has_credentials": true
 }
