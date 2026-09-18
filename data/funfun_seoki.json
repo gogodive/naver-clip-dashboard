@@ -4,19 +4,19 @@
  "clip_id": "funfun_seoki",
  "profile_key": "dPxqMETGKSZjVeVkDp30",
  "nickname": "물 만난 약사",
- "followers": 95,
+ "followers": 107,
  "registered_at": "2026-06-02T09:35:44.000",
- "fetched_at": "2026-09-18T05:00:05.375101+09:00",
- "data_through": "2026-09-16",
+ "fetched_at": "2026-09-19T05:00:06.380050+09:00",
+ "data_through": "2026-09-17",
  "data_from": "2026-07-16",
  "totals": {
   "play": {
-   "count": 26478,
+   "count": 26483,
    "diff_rate": null,
    "diff_type": null
   },
   "unique_user": {
-   "count": 13226,
+   "count": 13230,
    "diff_rate": null,
    "diff_type": null
   },
@@ -36,13 +36,13 @@
  },
  "recent7": {
   "play": {
-   "count": 41,
-   "diff_rate": 26.8,
+   "count": 43,
+   "diff_rate": 6.5,
    "diff_type": "DOWN"
   },
   "unique_user": {
-   "count": 29,
-   "diff_rate": 29.3,
+   "count": 30,
+   "diff_rate": 11.8,
    "diff_type": "DOWN"
   },
   "like": {
@@ -55,7 +55,7 @@
    "diff_rate": null,
    "diff_type": null
   },
-  "exposure": 13,
+  "exposure": 10,
   "click": 0,
   "click_rate": 0.0
  },
@@ -907,6 +907,14 @@
    "revisit_user": 0,
    "follow_contribution": 0,
    "follow": 0
+  },
+  {
+   "date": "2026-09-17",
+   "play": 5,
+   "new_user": 4,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 2
   }
  ],
  "entry_points": [
@@ -917,7 +925,7 @@
   },
   {
    "name": "네이버 통합 검색",
-   "play": 1120,
+   "play": 1125,
    "ratio": 4.2
   },
   {
@@ -1014,7 +1022,7 @@
   {
    "age": "AGE_30",
    "gender": "MALE",
-   "play": 971,
+   "play": 972,
    "ratio": 4
   },
   {
@@ -1026,19 +1034,19 @@
   {
    "age": "AGE_40",
    "gender": "MALE",
-   "play": 5129,
+   "play": 5130,
    "ratio": 20
   },
   {
    "age": "AGE_40",
    "gender": "FEMALE",
    "play": 6409,
-   "ratio": 25
+   "ratio": 24
   },
   {
    "age": "AGE_50",
    "gender": "MALE",
-   "play": 4905,
+   "play": 4908,
    "ratio": 19
   },
   {
@@ -1062,6 +1070,100 @@
  ],
  "clips": [
   {
+   "no": 7064055,
+   "video_id": "0E387B1987FCE2938BE009A50CB4C302D8F9",
+   "title": "무조건 저장✨ 덕다이빙 하는 법 알려드릴게요🫡 #프리다이빙 #덕다이빙 #오늘클립챌린지",
+   "description": "무조건 저장✨ 덕다이빙 하는 법 알려드릴게요🫡 #프리다이빙 #덕다이빙 #오늘클립챌린지",
+   "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA5MThfMjcg/MDAxNzg5NzA1NTI5Mzg4.lAz5mJNfkb5rR1H78bBDAsJTT4TD36RFtPaC9Ycj7Aog.HLULup2bM7CD4bcquN8wUc6l6saFxNO_8gQh4irEs3Yg.JPEG/thumbnail-B5DE1533-0420-4C8C-B0C5-B5E4D3667D32.jpg",
+   "posted_at": "2026-09-18T13:25:34.000+09:00",
+   "duration": 32.623,
+   "play": 8,
+   "like": 1,
+   "category": "OUTDOOR/WATERACTIVITIES",
+   "exposure_status": "EXPOSURE",
+   "deleted": false,
+   "unique_user": null,
+   "exposure": null,
+   "click": null,
+   "click_rate": null,
+   "entry_points": [],
+   "age_gender": [
+    {
+     "age": "AGE_10",
+     "gender": "MALE",
+     "play": 0,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_10",
+     "gender": "FEMALE",
+     "play": 0,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_20",
+     "gender": "MALE",
+     "play": 0,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_20",
+     "gender": "FEMALE",
+     "play": 0,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_30",
+     "gender": "MALE",
+     "play": 0,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_30",
+     "gender": "FEMALE",
+     "play": 0,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_40",
+     "gender": "MALE",
+     "play": 0,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_40",
+     "gender": "FEMALE",
+     "play": 0,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_50",
+     "gender": "MALE",
+     "play": 0,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_50",
+     "gender": "FEMALE",
+     "play": 0,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_60_UP",
+     "gender": "MALE",
+     "play": 0,
+     "ratio": 0
+    },
+    {
+     "age": "AGE_60_UP",
+     "gender": "FEMALE",
+     "play": 0,
+     "ratio": 0
+    }
+   ],
+   "last_seen": "2026-09-19T05:00:06.380050+09:00"
+  },
+  {
    "no": 5821345,
    "video_id": "AE9D402AB5CD89ACCAA19116DFEE8552FE37",
    "title": "프리다이빙 슈트 관리법 3가지✨",
@@ -1069,12 +1171,12 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA4MTFfMTg1/MDAxNzg2NDM3MTg3NzQy.udqy3sU0ikc25S-GR5NgY98YoAqrc-KdvPIRzNt9UxUg.lnQhVOmA0afliv0H3RZVVjrPAzLgrt-7-SlMbIQ-Db8g.JPEG/thumbnail-51A949E1-0EFE-4676-B318-F490A625D3C3.jpg",
    "posted_at": "2026-08-11T17:33:14.000+09:00",
    "duration": 42.097,
-   "play": 148,
+   "play": 149,
    "like": 6,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
    "deleted": false,
-   "unique_user": 123,
+   "unique_user": 124,
    "exposure": 271,
    "click": 15,
    "click_rate": 5.5,
@@ -1082,12 +1184,12 @@
     {
      "name": "네이버 홈",
      "play": 87,
-     "ratio": 60.0
+     "ratio": 59.5
     },
     {
      "name": "네이버 통합 검색",
-     "play": 50,
-     "ratio": 34.4
+     "play": 51,
+     "ratio": 34.9
     },
     {
      "name": "클립프로필 엔드뷰어",
@@ -1139,7 +1241,7 @@
      "age": "AGE_30",
      "gender": "MALE",
      "play": 12,
-     "ratio": 9
+     "ratio": 8
     },
     {
      "age": "AGE_30",
@@ -1150,8 +1252,8 @@
     {
      "age": "AGE_40",
      "gender": "MALE",
-     "play": 41,
-     "ratio": 29
+     "play": 42,
+     "ratio": 30
     },
     {
      "age": "AGE_40",
@@ -1163,7 +1265,7 @@
      "age": "AGE_50",
      "gender": "MALE",
      "play": 22,
-     "ratio": 16
+     "ratio": 15
     },
     {
      "age": "AGE_50",
@@ -1184,7 +1286,7 @@
      "ratio": 0
     }
    ],
-   "last_seen": "2026-09-18T05:00:05.375101+09:00"
+   "last_seen": "2026-09-19T05:00:06.380050+09:00"
   },
   {
    "no": 5710713,
@@ -1194,19 +1296,19 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA4MDdfMjM1/MDAxNzg2MDkyMDkzNzQ0.J2NHleX5XqfwD8KYl-Wpb9RstBw2EI5zKpjww34wyDcg.P4NV2o6jFnh5l_l0drh3Y9YT5XidV_MAmmlGBO3BaQwg.JPEG/thumbnail-43FBEA46-7EBE-4C77-A468-411FF612DBDC.jpg",
    "posted_at": "2026-08-07T17:41:42.000+09:00",
    "duration": 43.792,
-   "play": 187,
+   "play": 190,
    "like": 1,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
    "deleted": false,
-   "unique_user": 118,
+   "unique_user": 119,
    "exposure": 53,
    "click": 5,
    "click_rate": 9.4,
    "entry_points": [
     {
      "name": "네이버 통합 검색",
-     "play": 157,
+     "play": 158,
      "ratio": 93.4
     },
     {
@@ -1277,8 +1379,8 @@
     {
      "age": "AGE_50",
      "gender": "MALE",
-     "play": 11,
-     "ratio": 8
+     "play": 12,
+     "ratio": 9
     },
     {
      "age": "AGE_50",
@@ -1299,7 +1401,7 @@
      "ratio": 4
     }
    ],
-   "last_seen": "2026-09-18T05:00:05.375101+09:00"
+   "last_seen": "2026-09-19T05:00:06.380050+09:00"
   },
   {
    "no": 5352411,
@@ -1309,12 +1411,12 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA3MjRfMTE1/MDAxNzg0ODgxMzM0NDMz.iYqc18PrKfMXogIzpLSR1j5b5uOl-Eoif-HjOB40GwUg.CEscFBw5LgU3ySAJt5ZT6Twtgn-MAWC-SvF5UWt1LxQg.JPEG/thumbnail-FE0547F8-69D0-46E2-9904-631EA388EDA0.jpg",
    "posted_at": "2026-07-24T17:22:20.000+09:00",
    "duration": 90.0,
-   "play": 1908,
+   "play": 1910,
    "like": 6,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
    "deleted": false,
-   "unique_user": 1378,
+   "unique_user": 1381,
    "exposure": 2504,
    "click": 160,
    "click_rate": 6.4,
@@ -1322,12 +1424,12 @@
     {
      "name": "네이버 홈",
      "play": 1750,
-     "ratio": 92.2
+     "ratio": 92.1
     },
     {
      "name": "네이버 통합 검색",
-     "play": 85,
-     "ratio": 4.4
+     "play": 88,
+     "ratio": 4.6
     },
     {
      "name": "기타",
@@ -1388,7 +1490,7 @@
     {
      "age": "AGE_30",
      "gender": "MALE",
-     "play": 98,
+     "play": 99,
      "ratio": 5
     },
     {
@@ -1412,8 +1514,8 @@
     {
      "age": "AGE_50",
      "gender": "MALE",
-     "play": 459,
-     "ratio": 24
+     "play": 461,
+     "ratio": 25
     },
     {
      "age": "AGE_50",
@@ -1434,7 +1536,7 @@
      "ratio": 3
     }
    ],
-   "last_seen": "2026-09-18T05:00:05.375101+09:00"
+   "last_seen": "2026-09-19T05:00:06.380050+09:00"
   },
   {
    "no": 5142740,
@@ -1444,7 +1546,7 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA3MTZfMTIz/MDAxNzg0MTg4MTcwNzEz.dMiO6A91KG8HxGCIg66rtFdGKn7Siqoo1TsQSFPxki4g.nVa0-jiMh7sa2jnhn3WAF4oLdEscxQJinl5N9ZV3nDAg.JPEG/thumbnail-102DCF43-F7D7-413E-9C4A-642AEF105E02.jpg",
    "posted_at": "2026-07-16T16:49:35.000+09:00",
    "duration": 20.851,
-   "play": 3378,
+   "play": 3756,
    "like": 7,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
@@ -1574,10 +1676,10 @@
      "ratio": 6
     }
    ],
-   "last_seen": "2026-09-18T05:00:05.375101+09:00"
+   "last_seen": "2026-09-19T05:00:06.380050+09:00"
   }
  ],
  "error": null,
- "session_days_left": 11.0,
+ "session_days_left": 10.0,
  "has_credentials": true
 }
