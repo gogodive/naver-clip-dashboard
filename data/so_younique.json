@@ -4,9 +4,9 @@
  "clip_id": "so_younique",
  "profile_key": "4FGok2e8KK5bEKb6O57U",
  "nickname": "운동하는 디자이너",
- "followers": 32,
+ "followers": 33,
  "registered_at": "2026-07-07T13:13:48.000",
- "fetched_at": "2026-09-25T05:00:01.440129+09:00",
+ "fetched_at": "2026-09-26T05:00:02.589982+09:00",
  "data_through": null,
  "data_from": null,
  "totals": {
@@ -738,6 +738,6 @@
  ],
  "clips": [],
  "error": null,
- "session_days_left": 4.0,
+ "session_days_left": 3.0,
  "has_credentials": false
 }
