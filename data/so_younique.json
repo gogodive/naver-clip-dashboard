@@ -6,7 +6,7 @@
  "nickname": "운동하는 디자이너",
  "followers": 33,
  "registered_at": "2026-07-07T13:13:48.000",
- "fetched_at": "2026-09-26T05:00:02.589982+09:00",
+ "fetched_at": "2026-09-27T05:00:01.640150+09:00",
  "data_through": null,
  "data_from": null,
  "totals": {
@@ -659,6 +659,46 @@
    "revisit_user": 0,
    "follow_contribution": 0,
    "follow": 3
+  },
+  {
+   "date": "2026-09-21",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-09-22",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-09-23",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-09-24",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-09-25",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
   }
  ],
  "entry_points": [],
@@ -736,8 +776,30 @@
    "ratio": 0
   }
  ],
- "clips": [],
+ "clips": [
+  {
+   "no": null,
+   "video_id": "80C12BF19607D528B7B43E18CECAAE499F65",
+   "title": "고고젤로_컷1_락커룸_훅_5s.mp4",
+   "description": "고고젤로_컷1_락커룸_훅_5s.mp4",
+   "thumbnail": "https://video-phinf.pstatic.net/20260927_175/1790448169041Xzz63_JPEG/v0biIJCQRd_03.jpg",
+   "posted_at": "2026-09-27T03:42:47.082+09:00",
+   "duration": 5.12,
+   "play": null,
+   "like": null,
+   "category": "",
+   "exposure_status": null,
+   "deleted": false,
+   "unique_user": null,
+   "exposure": null,
+   "click": null,
+   "click_rate": null,
+   "entry_points": [],
+   "age_gender": [],
+   "last_seen": "2026-09-27T05:00:01.640150+09:00"
+  }
+ ],
  "error": null,
- "session_days_left": 3.0,
+ "session_days_left": 2.0,
  "has_credentials": false
 }
