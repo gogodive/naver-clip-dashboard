@@ -15,7 +15,7 @@ from pathlib import Path
 import yaml
 
 from src import normalize as nz
-from src.clipapi import ClipClient
+from src.clipapi import ClipClient, wait_for_network
 from src.naver_login import (LoginChallenge, LoginFailed, auto_login,
                              days_until_expiry, has_credentials, refresh_session)
 from src.session import MissingSession, SessionExpired, build_session
@@ -69,7 +69,8 @@ def collect_account(client: ClipClient, account: dict, stored: dict,
     win7 = {"period": "7d"}
     allp = {"period": "all"}
 
-    clips = [nz.clip_record(i) for i in _safe(lambda: client.get_clips(pk), [])]
+    clips = [nz.clip_record(i) for i in _safe(lambda: client.get_clips(pk), [])
+             if nz.is_published(i)]
     now_iso = now.isoformat()
 
     # 상세 지표는 최근 클립부터 — 계정이 커져도 호출 수가 무한정 늘지 않게 막는다
@@ -148,6 +149,9 @@ def collect_all(config: dict, profiles_dir: Path, data_dir: Path,
     headless = login_cfg.get("headless", True)
     relogin_before = login_cfg.get("relogin_before_days", 5)
     out: list[dict] = []
+
+    if not wait_for_network():
+        log.error("네트워크가 끝내 잡히지 않았습니다 — 수집을 시도하되 실패할 가능성이 큽니다")
 
     for account in config["accounts"]:
         naver_id = account["naver_id"]

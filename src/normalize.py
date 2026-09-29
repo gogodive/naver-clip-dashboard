@@ -100,6 +100,14 @@ def clip_title(description: str | None) -> str:
     return first or "(제목 없음)"
 
 
+def is_published(item: dict) -> bool:
+    """게시된 클립인지. 콘텐츠 목록 API는 임시저장 초안도 섞어서 돌려준다.
+
+    초안은 mediaContentNo 가 None 이라 상세 지표를 조회하면 404 가 난다.
+    """
+    return not item.get("draft") and item.get("mediaContentNo") is not None
+
+
 def clip_record(item: dict) -> dict:
     """콘텐츠 목록 항목 → 저장 형태."""
     cat = item.get("category") or {}
@@ -134,7 +142,8 @@ def merge_clips(stored: list[dict], fresh: list[dict], now_iso: str) -> list[dic
         out.append(c)
 
     for old in stored:
-        if old.get("no") in fresh_by_no:
+        # 번호 없는 항목은 예전에 잘못 저장된 초안이다 — 유령 카드로 남기지 않는다
+        if old.get("no") is None or old.get("no") in fresh_by_no:
             continue
         gone = dict(old)
         gone["deleted"] = True

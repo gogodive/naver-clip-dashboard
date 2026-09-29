@@ -7,6 +7,9 @@
 from __future__ import annotations
 
 import logging
+import socket
+import time
+from urllib.parse import urlparse
 
 import requests
 
@@ -17,6 +20,25 @@ log = logging.getLogger(__name__)
 BASE = "https://clip-service-elb-public.io.naver.com"
 TIMEOUT = 30
 PAGE_SIZE = 100
+
+
+def wait_for_network(timeout_s: int = 180, interval_s: int = 10) -> bool:
+    """API 호스트의 DNS 가 풀릴 때까지 기다린다. 제한 시간 안에 풀리면 True.
+
+    절전에서 깨어난 직후나 네트워크가 잠깐 끊긴 순간에 실행되면 첫 요청이
+    DNS 실패로 전부 죽는다(2026-09-29 실제 발생). 몇 분 기다리면 대개 살아난다.
+    """
+    host = urlparse(BASE).hostname
+    deadline = time.time() + timeout_s
+    while True:
+        try:
+            socket.getaddrinfo(host, 443)
+            return True
+        except OSError:
+            if time.time() >= deadline:
+                return False
+            log.warning("네트워크 대기 중 — %s 주소 해석 실패, %d초 후 재시도", host, interval_s)
+            time.sleep(interval_s)
 
 
 class ClipAPIError(RuntimeError):

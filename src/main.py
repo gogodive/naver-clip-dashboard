@@ -8,7 +8,7 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from src import keychain
+from src import keychain, notify
 from src.collect import collect_all, load_config
 from src.notion_status import build_status, update_callout
 from src.render import render_html
@@ -36,6 +36,7 @@ def main() -> int:
 
     icon, status = build_status(accounts, now)
     print(f"완료: {icon} {status} → docs/index.html")
+    alerts = [] if icon == "✅" else [status]
 
     # 노션 상태 기록은 부가 기능 — 실패해도 수집/배포를 막지 않는다
     # 토큰은 키체인이 우선, 없으면 환경변수(.env)
@@ -46,9 +47,15 @@ def main() -> int:
             print("노션 상태 콜아웃 갱신 완료")
         else:
             print("노션 콜아웃 갱신 실패 — 통합이 허브 페이지에 연결됐는지 확인하세요")
-    else:
+            alerts.append("노션 콜아웃 갱신 실패 — 콜아웃이 옛 상태에 멈춰 있습니다")
+    elif page_id:
+        # 허브 페이지를 설정해 놓고 토큰이 없다면 키체인이 날아갔을 가능성이 크다
         print(f"노션 토큰 없음 — 상태 기록 건너뜀 "
               f"({keychain.store_hint(NOTION_KEYCHAIN_ACCOUNT)})")
+        alerts.append("노션 토큰을 키체인에서 못 읽었습니다 — 키체인 초기화 여부 확인")
+
+    if alerts:
+        notify.mac("🚨 네이버 클립 대시보드", " / ".join(alerts))
 
     # 세션 만료는 사람이 손대야 풀린다 — 종료 코드로도 알린다
     return 2 if any(a.get("error") == "session" for a in accounts) else 0

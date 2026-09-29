@@ -108,3 +108,21 @@ def test_entry_points_and_age_gender():
         {"age": "AGE_40", "gender": "FEMALE", "play": 258, "ratio": 24}]
     assert nz.entry_points({}) == []
     assert nz.age_gender({}) == []
+
+
+def test_is_published_excludes_drafts():
+    """콘텐츠 목록 API는 임시저장 초안도 돌려준다 — 번호도 지표도 없으니 클립이 아니다."""
+    draft = {"draft": True, "draftNo": 814488, "draftStatus": "DRAFT", "mediaContentNo": None}
+    live = {"draft": False, "draftNo": None, "mediaContentNo": 7064055}
+    assert not nz.is_published(draft)
+    assert nz.is_published(live)
+    assert not nz.is_published({"mediaContentNo": None})   # 번호 없으면 상세 조회가 404
+
+
+def test_merge_clips_drops_stored_items_without_number():
+    """예전에 초안이 잘못 저장됐다면 '삭제됨' 유령 카드로 남기지 말고 버린다."""
+    stored = [{"no": None, "posted_at": "2026-09-27", "deleted": False},
+              {"no": 1, "play": 10, "posted_at": "2026-07-01", "deleted": False}]
+    out = nz.merge_clips(stored, [], "now")
+    assert [c["no"] for c in out] == [1]
+    assert out[0]["deleted"] is True
