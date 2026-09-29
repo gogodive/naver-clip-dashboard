@@ -95,6 +95,18 @@ tail -f logs/launchd.out                    # 로그
 ### 비밀번호 저장
 
 키체인에만 둔다. 리포지토리·설정파일·환경변수 어디에도 저장하지 않는다.
+네이버 비밀번호 3개와 노션 토큰을 한 번에 넣으려면:
+
+```bash
+./setup_keychain.sh
+```
+
+**맥 로그인 비밀번호를 재설정하면 macOS가 키체인을 초기화한다.** 옛 키체인은
+`login_renamed_1.keychain-db` 로 치워지지만 옛 비밀번호 없이는 열 수 없으므로,
+위 스크립트로 다시 넣는 것이 유일한 복구 방법이다. 이때는 노션 갱신이 끊기므로
+대신 맥 알림으로 경고가 뜬다.
+
+한 항목만 넣으려면:
 
 ```bash
 security add-generic-password -s naver-clip -a <네이버ID> -w
