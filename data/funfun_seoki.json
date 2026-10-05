@@ -4,19 +4,19 @@
  "clip_id": "funfun_seoki",
  "profile_key": "dPxqMETGKSZjVeVkDp30",
  "nickname": "물 만난 약사",
- "followers": 139,
+ "followers": 138,
  "registered_at": "2026-06-02T09:35:44.000",
- "fetched_at": "2026-10-05T05:00:06.117908+09:00",
- "data_through": "2026-10-03",
+ "fetched_at": "2026-10-06T05:00:02.132283+09:00",
+ "data_through": "2026-10-04",
  "data_from": "2026-07-16",
  "totals": {
   "play": {
-   "count": 26601,
+   "count": 26604,
    "diff_rate": null,
    "diff_type": null
   },
   "unique_user": {
-   "count": 13295,
+   "count": 13298,
    "diff_rate": null,
    "diff_type": null
   },
@@ -36,13 +36,13 @@
  },
  "recent7": {
   "play": {
-   "count": 30,
-   "diff_rate": 43.4,
+   "count": 24,
+   "diff_rate": 52.0,
    "diff_type": "DOWN"
   },
   "unique_user": {
-   "count": 22,
-   "diff_rate": 40.5,
+   "count": 20,
+   "diff_rate": 41.2,
    "diff_type": "DOWN"
   },
   "like": {
@@ -1043,6 +1043,14 @@
    "revisit_user": 0,
    "follow_contribution": 0,
    "follow": -1
+  },
+  {
+   "date": "2026-10-04",
+   "play": 3,
+   "new_user": 3,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
   }
  ],
  "entry_points": [
@@ -1053,7 +1061,7 @@
   },
   {
    "name": "네이버 통합 검색",
-   "play": 1219,
+   "play": 1222,
    "ratio": 4.5
   },
   {
@@ -1150,13 +1158,13 @@
   {
    "age": "AGE_30",
    "gender": "MALE",
-   "play": 981,
+   "play": 982,
    "ratio": 4
   },
   {
    "age": "AGE_30",
    "gender": "FEMALE",
-   "play": 1472,
+   "play": 1473,
    "ratio": 6
   },
   {
@@ -1180,7 +1188,7 @@
   {
    "age": "AGE_50",
    "gender": "FEMALE",
-   "play": 4345,
+   "play": 4346,
    "ratio": 17
   },
   {
@@ -1210,30 +1218,30 @@
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
    "deleted": false,
-   "unique_user": 21,
+   "unique_user": 23,
    "exposure": 7,
    "click": 3,
    "click_rate": 42.9,
    "entry_points": [
     {
      "name": "네이버 통합 검색",
-     "play": 24,
-     "ratio": 61.5
+     "play": 26,
+     "ratio": 63.4
     },
     {
      "name": "클립프로필 엔드뷰어",
      "play": 7,
-     "ratio": 17.9
+     "ratio": 17.0
     },
     {
      "name": "네이버 클립 검색",
      "play": 6,
-     "ratio": 15.3
+     "ratio": 14.6
     },
     {
      "name": "기타",
      "play": 2,
-     "ratio": 5.1
+     "ratio": 4.8
     }
    ],
    "age_gender": [
@@ -1265,25 +1273,25 @@
      "age": "AGE_30",
      "gender": "MALE",
      "play": 4,
-     "ratio": 14
+     "ratio": 13
     },
     {
      "age": "AGE_30",
      "gender": "FEMALE",
-     "play": 4,
-     "ratio": 14
+     "play": 5,
+     "ratio": 16
     },
     {
      "age": "AGE_40",
      "gender": "MALE",
      "play": 5,
-     "ratio": 17
+     "ratio": 16
     },
     {
      "age": "AGE_40",
      "gender": "FEMALE",
      "play": 10,
-     "ratio": 34
+     "ratio": 32
     },
     {
      "age": "AGE_50",
@@ -1294,8 +1302,8 @@
     {
      "age": "AGE_50",
      "gender": "FEMALE",
-     "play": 6,
-     "ratio": 21
+     "play": 7,
+     "ratio": 23
     },
     {
      "age": "AGE_60_UP",
@@ -1310,7 +1318,7 @@
      "ratio": 0
     }
    ],
-   "last_seen": "2026-10-05T05:00:06.117908+09:00"
+   "last_seen": "2026-10-06T05:00:02.132283+09:00"
   },
   {
    "no": 5821345,
@@ -1435,7 +1443,7 @@
      "ratio": 0
     }
    ],
-   "last_seen": "2026-10-05T05:00:06.117908+09:00"
+   "last_seen": "2026-10-06T05:00:02.132283+09:00"
   },
   {
    "no": 5710713,
@@ -1450,14 +1458,14 @@
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
    "deleted": false,
-   "unique_user": 135,
+   "unique_user": 136,
    "exposure": 56,
    "click": 5,
    "click_rate": 8.9,
    "entry_points": [
     {
      "name": "네이버 통합 검색",
-     "play": 184,
+     "play": 185,
      "ratio": 92.9
     },
     {
@@ -1504,8 +1512,8 @@
     {
      "age": "AGE_30",
      "gender": "MALE",
-     "play": 15,
-     "ratio": 9
+     "play": 16,
+     "ratio": 10
     },
     {
      "age": "AGE_30",
@@ -1550,7 +1558,7 @@
      "ratio": 3
     }
    ],
-   "last_seen": "2026-10-05T05:00:06.117908+09:00"
+   "last_seen": "2026-10-06T05:00:02.132283+09:00"
   },
   {
    "no": 5352411,
@@ -1685,7 +1693,7 @@
      "ratio": 3
     }
    ],
-   "last_seen": "2026-10-05T05:00:06.117908+09:00"
+   "last_seen": "2026-10-06T05:00:02.132283+09:00"
   },
   {
    "no": 5142740,
@@ -1825,10 +1833,10 @@
      "ratio": 6
     }
    ],
-   "last_seen": "2026-10-05T05:00:06.117908+09:00"
+   "last_seen": "2026-10-06T05:00:02.132283+09:00"
   }
  ],
  "error": null,
- "session_days_left": -6.0,
+ "session_days_left": -7.0,
  "has_credentials": false
 }
