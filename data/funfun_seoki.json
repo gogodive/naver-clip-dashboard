@@ -4,14 +4,14 @@
  "clip_id": "funfun_seoki",
  "profile_key": "dPxqMETGKSZjVeVkDp30",
  "nickname": "물 만난 약사",
- "followers": 138,
+ "followers": 139,
  "registered_at": "2026-06-02T09:35:44.000",
- "fetched_at": "2026-10-06T05:00:02.132283+09:00",
- "data_through": "2026-10-04",
+ "fetched_at": "2026-10-07T05:00:02.080266+09:00",
+ "data_through": "2026-10-05",
  "data_from": "2026-07-16",
  "totals": {
   "play": {
-   "count": 26604,
+   "count": 26605,
    "diff_rate": null,
    "diff_type": null
   },
@@ -36,13 +36,13 @@
  },
  "recent7": {
   "play": {
-   "count": 24,
-   "diff_rate": 52.0,
+   "count": 21,
+   "diff_rate": 50.0,
    "diff_type": "DOWN"
   },
   "unique_user": {
-   "count": 20,
-   "diff_rate": 41.2,
+   "count": 17,
+   "diff_rate": 41.4,
    "diff_type": "DOWN"
   },
   "like": {
@@ -1051,6 +1051,14 @@
    "revisit_user": 0,
    "follow_contribution": 0,
    "follow": 0
+  },
+  {
+   "date": "2026-10-05",
+   "play": 1,
+   "new_user": 0,
+   "revisit_user": 1,
+   "follow_contribution": 0,
+   "follow": -1
   }
  ],
  "entry_points": [
@@ -1061,7 +1069,7 @@
   },
   {
    "name": "네이버 통합 검색",
-   "play": 1222,
+   "play": 1223,
    "ratio": 4.5
   },
   {
@@ -1152,7 +1160,7 @@
   {
    "age": "AGE_20",
    "gender": "FEMALE",
-   "play": 210,
+   "play": 211,
    "ratio": 1
   },
   {
@@ -1213,7 +1221,7 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA5MThfMjcg/MDAxNzg5NzA1NTI5Mzg4.lAz5mJNfkb5rR1H78bBDAsJTT4TD36RFtPaC9Ycj7Aog.HLULup2bM7CD4bcquN8wUc6l6saFxNO_8gQh4irEs3Yg.JPEG/thumbnail-B5DE1533-0420-4C8C-B0C5-B5E4D3667D32.jpg",
    "posted_at": "2026-09-18T13:25:34.000+09:00",
    "duration": 32.623,
-   "play": 43,
+   "play": 46,
    "like": 3,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
@@ -1318,7 +1326,7 @@
      "ratio": 0
     }
    ],
-   "last_seen": "2026-10-06T05:00:02.132283+09:00"
+   "last_seen": "2026-10-07T05:00:02.080266+09:00"
   },
   {
    "no": 5821345,
@@ -1443,7 +1451,7 @@
      "ratio": 0
     }
    ],
-   "last_seen": "2026-10-06T05:00:02.132283+09:00"
+   "last_seen": "2026-10-07T05:00:02.080266+09:00"
   },
   {
    "no": 5710713,
@@ -1453,7 +1461,7 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA4MDdfMjM1/MDAxNzg2MDkyMDkzNzQ0.J2NHleX5XqfwD8KYl-Wpb9RstBw2EI5zKpjww34wyDcg.P4NV2o6jFnh5l_l0drh3Y9YT5XidV_MAmmlGBO3BaQwg.JPEG/thumbnail-43FBEA46-7EBE-4C77-A468-411FF612DBDC.jpg",
    "posted_at": "2026-08-07T17:41:42.000+09:00",
    "duration": 43.792,
-   "play": 218,
+   "play": 221,
    "like": 1,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
@@ -1558,7 +1566,7 @@
      "ratio": 3
     }
    ],
-   "last_seen": "2026-10-06T05:00:02.132283+09:00"
+   "last_seen": "2026-10-07T05:00:02.080266+09:00"
   },
   {
    "no": 5352411,
@@ -1568,7 +1576,7 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA3MjRfMTE1/MDAxNzg0ODgxMzM0NDMz.iYqc18PrKfMXogIzpLSR1j5b5uOl-Eoif-HjOB40GwUg.CEscFBw5LgU3ySAJt5ZT6Twtgn-MAWC-SvF5UWt1LxQg.JPEG/thumbnail-FE0547F8-69D0-46E2-9904-631EA388EDA0.jpg",
    "posted_at": "2026-07-24T17:22:20.000+09:00",
    "duration": 90.0,
-   "play": 1938,
+   "play": 1939,
    "like": 6,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
@@ -1585,8 +1593,8 @@
     },
     {
      "name": "네이버 통합 검색",
-     "play": 115,
-     "ratio": 5.9
+     "play": 116,
+     "ratio": 6.0
     },
     {
      "name": "기타",
@@ -1641,8 +1649,8 @@
     {
      "age": "AGE_20",
      "gender": "FEMALE",
-     "play": 28,
-     "ratio": 1
+     "play": 29,
+     "ratio": 2
     },
     {
      "age": "AGE_30",
@@ -1693,7 +1701,7 @@
      "ratio": 3
     }
    ],
-   "last_seen": "2026-10-06T05:00:02.132283+09:00"
+   "last_seen": "2026-10-07T05:00:02.080266+09:00"
   },
   {
    "no": 5142740,
@@ -1833,10 +1841,10 @@
      "ratio": 6
     }
    ],
-   "last_seen": "2026-10-06T05:00:02.132283+09:00"
+   "last_seen": "2026-10-07T05:00:02.080266+09:00"
   }
  ],
  "error": null,
- "session_days_left": -7.0,
+ "session_days_left": -8.0,
  "has_credentials": false
 }
