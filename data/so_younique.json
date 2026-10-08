@@ -4,9 +4,9 @@
  "clip_id": "so_younique",
  "profile_key": "4FGok2e8KK5bEKb6O57U",
  "nickname": "운동하는 디자이너",
- "followers": 40,
+ "followers": 39,
  "registered_at": "2026-07-07T13:13:48.000",
- "fetched_at": "2026-10-08T05:00:02.209711+09:00",
+ "fetched_at": "2026-10-09T05:00:05.519967+09:00",
  "data_through": null,
  "data_from": null,
  "totals": {
@@ -787,6 +787,14 @@
    "revisit_user": 0,
    "follow_contribution": 0,
    "follow": 1
+  },
+  {
+   "date": "2026-10-07",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 1
   }
  ],
  "entry_points": [],
@@ -866,6 +874,6 @@
  ],
  "clips": [],
  "error": null,
- "session_days_left": -9.0,
+ "session_days_left": -10.0,
  "has_credentials": false
 }
