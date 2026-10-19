@@ -6,7 +6,7 @@
  "nickname": "운동하는 디자이너",
  "followers": 48,
  "registered_at": "2026-07-07T13:13:48.000",
- "fetched_at": "2026-10-19T05:00:01.719158+09:00",
+ "fetched_at": "2026-10-20T05:00:05.832524+09:00",
  "data_through": null,
  "data_from": null,
  "totals": {
@@ -851,6 +851,38 @@
    "revisit_user": 0,
    "follow_contribution": 0,
    "follow": 4
+  },
+  {
+   "date": "2026-10-15",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-10-16",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-10-17",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": 0
+  },
+  {
+   "date": "2026-10-18",
+   "play": 0,
+   "new_user": 0,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": -1
   }
  ],
  "entry_points": [],
@@ -930,6 +962,6 @@
  ],
  "clips": [],
  "error": null,
- "session_days_left": -20.0,
+ "session_days_left": -21.0,
  "has_credentials": false
 }
