@@ -39,28 +39,25 @@ def build_status(accounts: list[dict], generated_at: datetime) -> tuple[str, str
                       f"· 해당 계정은 이전 데이터")
     if expired:
         names = ", ".join(expired)
-        return "🚨", (f"{stamp} · {ok}/{total}개 계정 갱신 — {names} 자동 재로그인 실패 "
+        return "🚨", (f"{stamp} · {ok}/{total}개 계정 갱신 — {names} 세션 끊김 · 직접 로그인 필요 "
                       f"(python -m src.setup_login {expired[0]}) · 해당 계정은 이전 데이터")
     if failed:
         names = ", ".join(failed)
         return "⚠️", (f"{stamp} · {ok}/{total}개 계정 갱신 — 실패: {names} "
                       f"(해당 계정은 이전 데이터)")
 
-    # 수집은 됐지만 재로그인 안전장치가 꺼져 있거나 실패했다.
-    # 잔여 일수(쿠키 기한)는 원인이 아니라 증상이라 문구에 쓰지 않는다 — 매일 쓰는 한
-    # 서버는 쿠키 기한이 지나도 세션을 받아준다(2026-10 실측). 원인을 말해야 사람이 움직인다.
-    low = [a for a in accounts
-           if a.get("session_days_left") is not None
-           and a["session_days_left"] <= EXPIRY_WARN_DAYS]
-    if low:
-        head = f"{stamp} 갱신 완료 · {total}개 계정 · 클립 {clips:,}개"
-        no_creds = [a["naver_id"] for a in low if not a.get("has_credentials")]
-        if no_creds:
-            return "⚠️", (f"{head} — 키체인 비어 있음({', '.join(no_creds)}): "
-                          f"자동 재로그인·노션 갱신이 꺼질 수 있음 · ./setup_keychain.sh 실행")
-        failed_login = [a["naver_id"] for a in low]
-        return "⚠️", (f"{head} — 자동 재로그인 실패: {', '.join(failed_login)} · "
-                      f"python -m src.setup_login {failed_login[0]}")
+    # 비밀번호를 저장해 둔 계정인데 쿠키 기한이 바닥이면 선제 재로그인이 실패한 것이다.
+    # 비밀번호가 없는 계정은 사용자가 고른 운영 방식이라 기한 경과로 경고하지 않는다 —
+    # 매일 쓰는 한 서버는 기한이 지나도 세션을 받아주고(2026-10 실측), 진짜로 끊기면
+    # 위의 "세션 끊김" 🚨 로 잡힌다.
+    stuck = [a["naver_id"] for a in accounts
+             if a.get("has_credentials")
+             and a.get("session_days_left") is not None
+             and a["session_days_left"] <= EXPIRY_WARN_DAYS]
+    if stuck:
+        return "⚠️", (f"{stamp} 갱신 완료 · {total}개 계정 · 클립 {clips:,}개 "
+                      f"— 자동 재로그인 실패: {', '.join(stuck)} · "
+                      f"python -m src.setup_login {stuck[0]}")
 
     return "✅", f"{stamp} 갱신 완료 · {total}개 계정 · 클립 {clips:,}개"
 

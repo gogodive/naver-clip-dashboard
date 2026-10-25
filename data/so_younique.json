@@ -6,7 +6,7 @@
  "nickname": "운동하는 디자이너",
  "followers": 51,
  "registered_at": "2026-07-07T13:13:48.000",
- "fetched_at": "2026-10-25T10:56:24.839652+09:00",
+ "fetched_at": "2026-10-25T13:21:37.996821+09:00",
  "data_through": null,
  "data_from": null,
  "totals": {
@@ -1010,6 +1010,6 @@
  ],
  "clips": [],
  "error": null,
- "session_days_left": -26.2,
+ "session_days_left": -26.3,
  "has_credentials": false
 }

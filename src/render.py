@@ -144,7 +144,10 @@ def render_html(accounts: list[dict], generated_at: datetime) -> str:
         acc["_live_clips"] = sum(1 for c in clips if not c.get("deleted"))
         acc["_deleted_clips"] = sum(1 for c in clips if c.get("deleted"))
         left = acc.get("session_days_left")
-        acc["_expiring"] = left if isinstance(left, (int, float)) and left <= EXPIRY_WARN_DAYS else None
+        # 비밀번호를 둔 계정만 — 안 둔 계정은 기한 경과가 경고 거리가 아니다
+        acc["_expiring"] = (left if acc.get("has_credentials")
+                            and isinstance(left, (int, float)) and left <= EXPIRY_WARN_DAYS
+                            else None)
         acc["_entry_rows"] = _entry_rows(acc.get("entry_points") or [])
         acc["_age_rows"] = _age_rows(acc.get("age_gender") or [])
         acc["_gender"] = _gender_split(acc.get("age_gender") or [])

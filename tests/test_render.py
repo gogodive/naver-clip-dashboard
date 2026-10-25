@@ -114,7 +114,8 @@ def test_render_html_shows_relogin_command_on_session_error():
         "naver_id": "so_younique", "name": "운동하는 디자이너", "clips": [],
         "daily": [], "entry_points": [], "age_gender": [], "error": "session",
     }], NOW)
-    assert "세션이 만료" in html
+    assert "세션이 끊겼습니다" in html
+    assert "자동 재로그인" not in html          # 비밀번호를 안 두면 자동 재로그인 자체가 없다
     assert "src.setup_login so_younique" in html
 
 
@@ -139,21 +140,13 @@ def test_relogin_failed_banner():
     assert "src.setup_login funfun_seoki" in html
 
 
-def test_empty_keychain_banner_does_not_claim_expiry():
+def test_no_banner_without_naver_credentials():
+    """비밀번호를 안 두기로 했으면 쿠키 기한 경과는 경고 거리가 아니다."""
     html = render.render_html([{
         "naver_id": "funfun_seoki", "name": "물 만난 약사", "clips": [], "daily": [],
         "entry_points": [], "age_gender": [], "error": None,
         "session_days_left": -26.0, "has_credentials": False,
     }], NOW)
-    assert "setup_keychain.sh" in html
-    assert "수집은 정상" in html
-    assert "만료됩니다" not in html
-
-
-def test_no_banner_when_session_healthy():
-    html = render.render_html([{
-        "naver_id": "x", "name": "x", "clips": [], "daily": [],
-        "entry_points": [], "age_gender": [], "error": None,
-        "session_days_left": 28.0, "has_credentials": True,
-    }], NOW)
-    assert "만료됩니다" not in html
+    assert "setup_keychain" not in html
+    assert "만료" not in html
+    assert "재로그인" not in html
