@@ -46,15 +46,21 @@ def build_status(accounts: list[dict], generated_at: datetime) -> tuple[str, str
         return "⚠️", (f"{stamp} · {ok}/{total}개 계정 갱신 — 실패: {names} "
                       f"(해당 계정은 이전 데이터)")
 
-    # 수집은 됐지만 세션이 곧 끊긴다 — 선제 재로그인이 듣지 않았다는 뜻이다
-    soon = [(a["naver_id"], a["session_days_left"]) for a in accounts
-            if a.get("session_days_left") is not None
-            and a["session_days_left"] <= EXPIRY_WARN_DAYS]
-    if soon:
-        names = ", ".join(f"{n}({d:.0f}일)" for n, d in sorted(soon, key=lambda x: x[1]))
-        return "⚠️", (f"{stamp} 갱신 완료 · {total}개 계정 · 클립 {clips:,}개 "
-                      f"— 세션 만료 임박: {names} · "
-                      f"python -m src.setup_login {sorted(soon, key=lambda x: x[1])[0][0]}")
+    # 수집은 됐지만 재로그인 안전장치가 꺼져 있거나 실패했다.
+    # 잔여 일수(쿠키 기한)는 원인이 아니라 증상이라 문구에 쓰지 않는다 — 매일 쓰는 한
+    # 서버는 쿠키 기한이 지나도 세션을 받아준다(2026-10 실측). 원인을 말해야 사람이 움직인다.
+    low = [a for a in accounts
+           if a.get("session_days_left") is not None
+           and a["session_days_left"] <= EXPIRY_WARN_DAYS]
+    if low:
+        head = f"{stamp} 갱신 완료 · {total}개 계정 · 클립 {clips:,}개"
+        no_creds = [a["naver_id"] for a in low if not a.get("has_credentials")]
+        if no_creds:
+            return "⚠️", (f"{head} — 키체인 비어 있음({', '.join(no_creds)}): "
+                          f"자동 재로그인·노션 갱신이 꺼질 수 있음 · ./setup_keychain.sh 실행")
+        failed_login = [a["naver_id"] for a in low]
+        return "⚠️", (f"{head} — 자동 재로그인 실패: {', '.join(failed_login)} · "
+                      f"python -m src.setup_login {failed_login[0]}")
 
     return "✅", f"{stamp} 갱신 완료 · {total}개 계정 · 클립 {clips:,}개"
 

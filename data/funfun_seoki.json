@@ -6,17 +6,17 @@
  "nickname": "물 만난 약사",
  "followers": 151,
  "registered_at": "2026-06-02T09:35:44.000",
- "fetched_at": "2026-10-25T05:00:02.145466+09:00",
- "data_through": "2026-10-23",
+ "fetched_at": "2026-10-25T10:56:24.839652+09:00",
+ "data_through": "2026-10-24",
  "data_from": "2026-07-16",
  "totals": {
   "play": {
-   "count": 26715,
+   "count": 26716,
    "diff_rate": null,
    "diff_type": null
   },
   "unique_user": {
-   "count": 13366,
+   "count": 13367,
    "diff_rate": null,
    "diff_type": null
   },
@@ -36,13 +36,13 @@
  },
  "recent7": {
   "play": {
-   "count": 51,
-   "diff_rate": 10.9,
+   "count": 48,
+   "diff_rate": 4.3,
    "diff_type": "UP"
   },
   "unique_user": {
-   "count": 28,
-   "diff_rate": 22.2,
+   "count": 27,
+   "diff_rate": 22.9,
    "diff_type": "DOWN"
   },
   "like": {
@@ -1203,6 +1203,14 @@
    "revisit_user": 1,
    "follow_contribution": 0,
    "follow": 2
+  },
+  {
+   "date": "2026-10-24",
+   "play": 1,
+   "new_user": 1,
+   "revisit_user": 0,
+   "follow_contribution": 0,
+   "follow": -1
   }
  ],
  "entry_points": [
@@ -1213,7 +1221,7 @@
   },
   {
    "name": "네이버 통합 검색",
-   "play": 1299,
+   "play": 1300,
    "ratio": 4.8
   },
   {
@@ -1352,7 +1360,7 @@
   {
    "age": "AGE_60_UP",
    "gender": "FEMALE",
-   "play": 1070,
+   "play": 1071,
    "ratio": 4
   }
  ],
@@ -1460,7 +1468,7 @@
      "ratio": 4
     }
    ],
-   "last_seen": "2026-10-25T05:00:02.145466+09:00"
+   "last_seen": "2026-10-25T10:56:24.839652+09:00"
   },
   {
    "no": 7064055,
@@ -1580,7 +1588,7 @@
      "ratio": 0
     }
    ],
-   "last_seen": "2026-10-25T05:00:02.145466+09:00"
+   "last_seen": "2026-10-25T10:56:24.839652+09:00"
   },
   {
    "no": 5821345,
@@ -1705,7 +1713,7 @@
      "ratio": 0
     }
    ],
-   "last_seen": "2026-10-25T05:00:02.145466+09:00"
+   "last_seen": "2026-10-25T10:56:24.839652+09:00"
   },
   {
    "no": 5710713,
@@ -1825,7 +1833,7 @@
      "ratio": 3
     }
    ],
-   "last_seen": "2026-10-25T05:00:02.145466+09:00"
+   "last_seen": "2026-10-25T10:56:24.839652+09:00"
   },
   {
    "no": 5352411,
@@ -1840,7 +1848,7 @@
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
    "deleted": false,
-   "unique_user": 1430,
+   "unique_user": 1431,
    "exposure": 2511,
    "click": 162,
    "click_rate": 6.5,
@@ -1848,12 +1856,12 @@
     {
      "name": "네이버 홈",
      "play": 1750,
-     "ratio": 89.4
+     "ratio": 89.3
     },
     {
      "name": "네이버 통합 검색",
-     "play": 140,
-     "ratio": 7.1
+     "play": 141,
+     "ratio": 7.2
     },
     {
      "name": "기타",
@@ -1956,11 +1964,11 @@
     {
      "age": "AGE_60_UP",
      "gender": "FEMALE",
-     "play": 61,
+     "play": 62,
      "ratio": 3
     }
    ],
-   "last_seen": "2026-10-25T05:00:02.145466+09:00"
+   "last_seen": "2026-10-25T10:56:24.839652+09:00"
   },
   {
    "no": 5142740,
@@ -2100,10 +2108,10 @@
      "ratio": 6
     }
    ],
-   "last_seen": "2026-10-25T05:00:02.145466+09:00"
+   "last_seen": "2026-10-25T10:56:24.839652+09:00"
   }
  ],
  "error": null,
- "session_days_left": -26.0,
+ "session_days_left": -26.2,
  "has_credentials": false
 }

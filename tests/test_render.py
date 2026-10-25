@@ -128,15 +128,26 @@ def test_render_html_escapes_script_in_title():
     assert "</script>" not in html.split("const CHART_DATA")[1].split("\n")[0]
 
 
-def test_expiring_session_banner():
-    """세션 잔여가 얼마 없으면 수집이 성공해도 배너로 알린다."""
+def test_relogin_failed_banner():
+    """비밀번호가 있는데 잔여가 낮으면 자동 재로그인이 실패한 것 — 수동 명령을 안내한다."""
     html = render.render_html([{
         "naver_id": "funfun_seoki", "name": "물 만난 약사", "clips": [], "daily": [],
         "entry_points": [], "age_gender": [], "error": None,
         "session_days_left": 3.0, "has_credentials": True,
     }], NOW)
-    assert "3일 뒤</b> 만료" in html
+    assert "자동 재로그인이 실패" in html
     assert "src.setup_login funfun_seoki" in html
+
+
+def test_empty_keychain_banner_does_not_claim_expiry():
+    html = render.render_html([{
+        "naver_id": "funfun_seoki", "name": "물 만난 약사", "clips": [], "daily": [],
+        "entry_points": [], "age_gender": [], "error": None,
+        "session_days_left": -26.0, "has_credentials": False,
+    }], NOW)
+    assert "setup_keychain.sh" in html
+    assert "수집은 정상" in html
+    assert "만료됩니다" not in html
 
 
 def test_no_banner_when_session_healthy():
