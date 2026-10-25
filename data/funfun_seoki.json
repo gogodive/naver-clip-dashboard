@@ -6,7 +6,7 @@
  "nickname": "물 만난 약사",
  "followers": 151,
  "registered_at": "2026-06-02T09:35:44.000",
- "fetched_at": "2026-10-25T13:21:37.996821+09:00",
+ "fetched_at": "2026-10-26T05:00:06.116216+09:00",
  "data_through": "2026-10-24",
  "data_from": "2026-07-16",
  "totals": {
@@ -1468,7 +1468,7 @@
      "ratio": 4
     }
    ],
-   "last_seen": "2026-10-25T13:21:37.996821+09:00"
+   "last_seen": "2026-10-26T05:00:06.116216+09:00"
   },
   {
    "no": 7064055,
@@ -1588,7 +1588,7 @@
      "ratio": 0
     }
    ],
-   "last_seen": "2026-10-25T13:21:37.996821+09:00"
+   "last_seen": "2026-10-26T05:00:06.116216+09:00"
   },
   {
    "no": 5821345,
@@ -1598,7 +1598,7 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA4MTFfMTg1/MDAxNzg2NDM3MTg3NzQy.udqy3sU0ikc25S-GR5NgY98YoAqrc-KdvPIRzNt9UxUg.lnQhVOmA0afliv0H3RZVVjrPAzLgrt-7-SlMbIQ-Db8g.JPEG/thumbnail-51A949E1-0EFE-4676-B318-F490A625D3C3.jpg",
    "posted_at": "2026-08-11T17:33:14.000+09:00",
    "duration": 42.097,
-   "play": 179,
+   "play": 181,
    "like": 6,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
@@ -1713,7 +1713,7 @@
      "ratio": 0
     }
    ],
-   "last_seen": "2026-10-25T13:21:37.996821+09:00"
+   "last_seen": "2026-10-26T05:00:06.116216+09:00"
   },
   {
    "no": 5710713,
@@ -1833,7 +1833,7 @@
      "ratio": 3
     }
    ],
-   "last_seen": "2026-10-25T13:21:37.996821+09:00"
+   "last_seen": "2026-10-26T05:00:06.116216+09:00"
   },
   {
    "no": 5352411,
@@ -1843,7 +1843,7 @@
    "thumbnail": "https://clip-service-phinf.pstatic.net/MjAyNjA3MjRfMTE1/MDAxNzg0ODgxMzM0NDMz.iYqc18PrKfMXogIzpLSR1j5b5uOl-Eoif-HjOB40GwUg.CEscFBw5LgU3ySAJt5ZT6Twtgn-MAWC-SvF5UWt1LxQg.JPEG/thumbnail-FE0547F8-69D0-46E2-9904-631EA388EDA0.jpg",
    "posted_at": "2026-07-24T17:22:20.000+09:00",
    "duration": 90.0,
-   "play": 1970,
+   "play": 1971,
    "like": 9,
    "category": "OUTDOOR/WATERACTIVITIES",
    "exposure_status": "EXPOSURE",
@@ -1968,7 +1968,7 @@
      "ratio": 3
     }
    ],
-   "last_seen": "2026-10-25T13:21:37.996821+09:00"
+   "last_seen": "2026-10-26T05:00:06.116216+09:00"
   },
   {
    "no": 5142740,
@@ -2108,10 +2108,10 @@
      "ratio": 6
     }
    ],
-   "last_seen": "2026-10-25T13:21:37.996821+09:00"
+   "last_seen": "2026-10-26T05:00:06.116216+09:00"
   }
  ],
  "error": null,
- "session_days_left": -26.3,
+ "session_days_left": -27.0,
  "has_credentials": false
 }
